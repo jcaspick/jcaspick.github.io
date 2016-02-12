@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jake Caspick</title>
-    <link>http://jcaspick.github.io/</link>
+    <link>http://www.jakecaspick.com/</link>
     <description>Recent content on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Feb 2016 14:56:05 -0400</lastBuildDate>
-    <atom:link href="http://jcaspick.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.jakecaspick.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>http://jcaspick.github.io/about/</link>
+      <link>http://www.jakecaspick.com/about/</link>
       <pubDate>Thu, 11 Feb 2016 14:56:05 -0400</pubDate>
       
-      <guid>http://jcaspick.github.io/about/</guid>
+      <guid>http://www.jakecaspick.com/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ZTower - My First HTML5 Game</title>
-      <link>http://jcaspick.github.io/post/ztower/</link>
+      <link>http://www.jakecaspick.com/post/ztower/</link>
       <pubDate>Thu, 11 Feb 2016 12:08:56 -0400</pubDate>
       
-      <guid>http://jcaspick.github.io/post/ztower/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://jcaspick.github.io/img/ztower.png&#34; alt=&#34;ZTower&#34; /&gt;&lt;/p&gt;
+      <guid>http://www.jakecaspick.com/post/ztower/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/ztower.png&#34; alt=&#34;ZTower&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is a simple game I wrote in the summer of 2015 when I was first learning Javascript.  I created it using the Phaser game library.  You can &lt;a href=&#34;https://jcaspick.github.io/ytower/&#34;&gt;play the game here&lt;/a&gt; and you can find the &lt;a href=&#34;https://github.com/jcaspick/ytower&#34;&gt;source code on GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -32,33 +32,33 @@
     
     <item>
       <title>Creating Infinite Tunnels With Raymarching</title>
-      <link>http://jcaspick.github.io/post/raymarching/</link>
+      <link>http://www.jakecaspick.com/post/raymarching/</link>
       <pubDate>Thu, 11 Feb 2016 11:46:35 -0400</pubDate>
       
-      <guid>http://jcaspick.github.io/post/raymarching/</guid>
+      <guid>http://www.jakecaspick.com/post/raymarching/</guid>
       <description>&lt;p&gt;I recently learned about an interesting technique for rendering 3D images, known as &lt;em&gt;raymarching distance fields&lt;/em&gt;.  This technique became popular in the demoscene for its power and simplicity.  It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code.  An excellent explanation of how the algorithm works can be found &lt;a href=&#34;http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html&#34;&gt;here&lt;/a&gt; and many working examples can be found on &lt;a href=&#34;https://www.shadertoy.com/view/Xds3zN&#34;&gt;Shadertoy&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been writing a raymarcher in Processing.  This project has given me a more detailed understanding of the algorithm, a &lt;em&gt;lot&lt;/em&gt; of practice with vector math in 3D space, and has allowed me to create some cool images.  My favorite effect is the infinite tunnel of geometry.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://jcaspick.github.io/img/raymarch1.gif&#34; alt=&#34;raymarch1&#34; /&gt;
-&lt;img src=&#34;http://jcaspick.github.io/img/raymarch2.gif&#34; alt=&#34;raymarch2&#34; /&gt;
-&lt;img src=&#34;http://jcaspick.github.io/img/protoplasm.gif&#34; alt=&#34;protoplasm&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/raymarch1.gif&#34; alt=&#34;raymarch1&#34; /&gt;
+&lt;img src=&#34;http://www.jakecaspick.com/img/raymarch2.gif&#34; alt=&#34;raymarch2&#34; /&gt;
+&lt;img src=&#34;http://www.jakecaspick.com/img/protoplasm.gif&#34; alt=&#34;protoplasm&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Global Game Jam 2016 - Writing a Procedural Maze Generator</title>
-      <link>http://jcaspick.github.io/post/gamejam2016/</link>
+      <link>http://www.jakecaspick.com/post/gamejam2016/</link>
       <pubDate>Wed, 10 Feb 2016 11:38:08 -0400</pubDate>
       
-      <guid>http://jcaspick.github.io/post/gamejam2016/</guid>
+      <guid>http://www.jakecaspick.com/post/gamejam2016/</guid>
       <description>
 
 &lt;p&gt;This year I participated in the Global Game Jam at Volta Labs.&lt;/p&gt;
 
 &lt;p&gt;The theme of the game jam was &lt;strong&gt;ritual&lt;/strong&gt;.  In our group brainstorm we thought of rituals as referring to repetitive behaviors and routines, which got us thinking about robots designed to perform specific functions, which ultimately led to an elaborate and whimsical game idea about amnesiac robots trying to rediscover their purpose.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://jcaspick.github.io/img/dd1.png&#34; alt=&#34;Directile Dysfunction: A Search For Meaning&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/dd1.png&#34; alt=&#34;Directile Dysfunction: A Search For Meaning&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Procedurally generated levels were part of the design of the game, and my role in the team was to write the level generator.  It later became apparent that our idea was over-ambitious (it wouldn&amp;rsquo;t be a game jam without a crash course in scope creep!)  My new mission was to take the code I had written so far and make a game out of it, trying to fit in as many elements of the original idea as possible.  The end result, just barely finished before the deadline, was a simple find-the-exit maze game starring a robot with an existential crisis.  You can download the game and Unity project &lt;a href=&#34;http://globalgamejam.org/2016/games/directile-dysfunction&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -76,8 +76,8 @@
 
 &lt;p&gt;My hypothesis was wrong.  Rather than a single network of rooms, I got multiple isolated islands.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://jcaspick.github.io/img/ddlevel1.png&#34; alt=&#34;level generator problem&#34; /&gt;
-&lt;img src=&#34;http://jcaspick.github.io/img/ddlevel2.png&#34; alt=&#34;level generator problem&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/ddlevel1.png&#34; alt=&#34;level generator problem&#34; /&gt;
+&lt;img src=&#34;http://www.jakecaspick.com/img/ddlevel2.png&#34; alt=&#34;level generator problem&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I realized now that what I was trying to write was, in essence, a maze generator.  I started reading about different ways of creating mazes and learned about Kruskal&amp;rsquo;s algorithm, Prim&amp;rsquo;s algorithm, and recursive backtracking. (lots of great information and code examples &lt;a href=&#34;http://weblog.jamisbuck.org/2011/2/7/maze-generation-algorithm-recap.html&#34;&gt;here&lt;/a&gt; if anybody is interested!)  Many browser tabs later I realized that I had fallen into a &lt;a href=&#34;https://xkcd.com/214/&#34;&gt;Nerd Vortex&lt;/a&gt;, that I wasn&amp;rsquo;t &lt;em&gt;really&lt;/em&gt; working on my code anymore, and that it was very late.&lt;/p&gt;
 
