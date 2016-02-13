@@ -29,11 +29,14 @@
       <guid>http://www.jakecaspick.com/post/raymarching/</guid>
       <description>&lt;p&gt;I recently learned about an interesting technique for rendering 3D images, known as &lt;em&gt;raymarching distance fields&lt;/em&gt;.  This technique became popular in the demoscene for its power and simplicity.  It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code.  An excellent explanation of how the algorithm works can be found &lt;a href=&#34;http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html&#34;&gt;here&lt;/a&gt; and many working examples can be found on &lt;a href=&#34;https://www.shadertoy.com/view/Xds3zN&#34;&gt;Shadertoy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve been writing a raymarcher in Processing.  This project has given me a more detailed understanding of the algorithm, a &lt;em&gt;lot&lt;/em&gt; of practice with vector math in 3D space, and has allowed me to create some cool images.  My favorite effect is the infinite tunnel of geometry.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been writing a raymarcher in Processing.  This project has given me a more detailed understanding of the algorithm and a &lt;em&gt;lot&lt;/em&gt; of practice with vector math in 3D space.  Even in it&amp;rsquo;s current bare-bones state, it is capable of generating some really cool images.  The most fun use of the program that I&amp;rsquo;ve discovered is creating these infinite tunnel gifs.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/raymarch1.gif&#34; alt=&#34;raymarch1&#34; /&gt;
 &lt;img src=&#34;http://www.jakecaspick.com/img/raymarch2.gif&#34; alt=&#34;raymarch2&#34; /&gt;
-&lt;img src=&#34;http://www.jakecaspick.com/img/protoplasm.gif&#34; alt=&#34;protoplasm&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.jakecaspick.com/img/protoplasm.gif&#34; alt=&#34;protoplasm&#34; /&gt;
+&lt;img src=&#34;http://www.jakecaspick.com/img/clockwerk.gif&#34; alt=&#34;clockwerk&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can view the source code &lt;a href=&#34;https://github.com/jcaspick/processing-raymarcher&#34;&gt;on GitHub&lt;/a&gt;.  I&amp;rsquo;ve tried to organize the code in a readable way, and written lots of comments explaining how the different parts work.&lt;/p&gt;
 </description>
     </item>
     
