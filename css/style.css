@@ -995,7 +995,11 @@ progress {
     background-color: #fff
 }
 .main_wrapper>.main_header {
-    background-color: #291f1f;
+    /*background-color: #291f1f;*/
+    background-clip: padding-box;
+    background-position: top;
+    background-image: linear-gradient(to right, transparent 80%, #ccc), url(../img/bg.png);
+    background-blend-mode: multiply, normal;
     font-family: Raleway, "Open Sans", Arial, sans-serif;
     color: #d1bbb8;
     text-align: center
