@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Endless Rainbow Road - A Procedural Racetrack Generator  &middot; Jake Caspick</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="">
+
+
+<meta property="og:title" content="Endless Rainbow Road - A Procedural Racetrack Generator  &middot; Jake Caspick ">
+<meta property="og:site_name" content="Jake Caspick"/>
+<meta property="og:url" content="http://www.jakecaspick.com/post/endlessroad/" />
+<meta property="og:locale" content="en-us">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2016-02-19T10:44:30-04:00" />
+<meta property="og:article:modified_time" content="2016-02-19T10:44:30-04:00" />
+
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="Endless Rainbow Road - A Procedural Racetrack Generator" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://www.jakecaspick.com/post/endlessroad/" />
+<meta name="twitter:domain" content="http://www.jakecaspick.com">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Endless Rainbow Road - A Procedural Racetrack Generator",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2016-02-19",
+    "description": "",
+    "wordCount":  874 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://www.jakecaspick.com/post/endlessroad/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.jakecaspick.com/touch-icon-144-precomposed.png">
+<link href="http://www.jakecaspick.com/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.15" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://www.jakecaspick.com/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://www.jakecaspick.com/css/style.css">
+<link rel="stylesheet" href="http://www.jakecaspick.com/css/highlight/github.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="http://www.jakecaspick.com">
+  Jake Caspick
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Code &amp; Art
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+
+  
+<a href="http://www.jakecaspick.com/about">About</a>
+
+<a href="http://www.jakecaspick.com/post">Posts</a>
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/jcaspick">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Endless Rainbow Road - A Procedural Racetrack Generator
+</h1>
+
+  <div class="metas">
+<time datetime="2016-02-19">19 Feb, 2016</time>
+
+
+  
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<p>Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&rsquo;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.</p>
+
+<p>This week I built a prototype to test this idea.  You can play it <a href="http://www.jakecaspick.com/ProceduralRacer/">here</a> and view the source code <a href="https://github.com/jcaspick/ProceduralRacer">on github</a>.  Read on for a post mortem of the project.</p>
+
+<p><img src="http://www.jakecaspick.com/img/racer1.png" alt="Infinite Rainbow Road!" /></p>
+
+<h1 id="the-idea:73894c868b704a69ebaf87d27a1403d5">The Idea</h1>
+
+<p>A racetrack is conceptually a very simple object. It is essentially a ribbon, a flat surface extruded along a path. My first thought was to use splines or bezier curves (which are just a specific type of spline). I could randomly generate a series of points and interpolate curves between them to get the center line of the racetrack. Then I could offset curves on either side and draw geometry between the curves.</p>
+
+<h1 id="problem-1:73894c868b704a69ebaf87d27a1403d5">Problem #1</h1>
+
+<p>The big problem with splines, and it is an especially big problem in the context of a racing game, is that there is no simple way to determine their length. The simplest workaround is to approximate the curve with a series of straight line segments, but even that seemed like a lot of work for a less than ideal result.</p>
+
+<p>On top of that, it turns out it is non-trivial to offset a curve from a spline such that the space in between the two curves has a constant width. It can be done, however the catch is that the offset curve of a spline cannot itself be represented as a spline. In other words, there would be no simple way to take a point on the center spline and find the corresponding point on the offset curve, which I would need to do to place vertices. (<a href="http://stackoverflow.com/questions/4148831/how-to-offset-a-cubic-bezier-curve">more information in this Stack Overflow discussion.</a>)</p>
+
+<p>I scrapped the idea of using splines pretty quickly.</p>
+
+<h1 id="the-solution:73894c868b704a69ebaf87d27a1403d5">The Solution</h1>
+
+<p>My research led me to two articles which were absolute goldmines of information. <a href="http://www.redblobgames.com/articles/curved-paths/">The first article</a>
+ deals with the problem of drawing curved roads in a Sim City type game, <a href="http://www.learn-cocos2d.com/2012/07/starting-point-train-game-freeform-tracks/">the second</a> deals with drawing curved tracks for a train simulator. Both were very similar to what I was trying to do, and both began by addressing the problems of using bezier curves.</p>
+
+<p>Both articles make the case for circular arcs as an alternative to splines, and that is what I ended up using for my game. With circular arcs it is trivial to calculate distance and to make perfect offsets. They are also more visually pleasing (and actually closely resemble the curvature of real-world roads and train tracks which are modelled with <a href="https://en.wikipedia.org/wiki/Euler_spiral">Euler Spirals</a>.)</p>
+
+<h1 id="problem-2:73894c868b704a69ebaf87d27a1403d5">Problem #2</h1>
+
+<p>Building a single arc segment object was quite simple. The object takes a starting point, starting angle, radius, and end angle and generates a mesh (<a href="http://catlikecoding.com/unity/tutorials/procedural-grid/">this tutorial</a> was very helpful for the mesh building part.)</p>
+
+<p>When I tried to string several arc segments together into a track, I encountered a frustrating problem that has to do with converting between a right-handed and left-handed coordinate system. I was using simple trigonometry to calculate points on my arcs. An angle of zero degrees points toward the positive X axis, and angles increase in a counterclockwise direction. However, in Unity an angle of zero degrees on the XZ plane points toward positive Z, and angles increase going clockwise.  As a result, none of my arcs were lining up properly.</p>
+
+<h1 id="the-solution-1:73894c868b704a69ebaf87d27a1403d5">The Solution</h1>
+
+<p>At first I tried to compensate for the difference in coordinate systems by writing conversion functions between them, but by this time my code was a tangled mess. I was passing data around, manipulating it with trigonometry and then converting it into Unity rotations by using the AngleAxis and Euler functions of Quaternions. It was difficult to pinpoint exactly where the conversion problem originated from, and any time I thought I had solved it I was breaking something else that I wouldn&rsquo;t notice until later.</p>
+
+<p>I decided to rewrite the code from scratch. This time, to keep things simple and consistent, I didn&rsquo;t apply any rotations to the arc objects whatsoever. To connect two arcs together seamlessly, I offset the starting angle of the second arc to match the ending angle of the first.</p>
+
+<h1 id="what-i-learned:73894c868b704a69ebaf87d27a1403d5">What I Learned</h1>
+
+<p>On the practical side, I learned two important new Unity skills. The first being the ability to generate geometry and UV coordinates from code, which is an extremely powerful tool. Secondly, a more subtle but equally powerful tool is writing extension methods to add functionality to built-in Unity classes (specifically, I needed a simple way to get just the X and Z components of a <code>Vector3</code> for certain calculations.)</p>
+
+<p>I also learned, after much frustrated troubleshooting, that sometimes the best solution to a problem is to start over. It&rsquo;s not fun to start over, but it&rsquo;s even less fun to write code bandaids to try and fix a low-level problem that could&rsquo;ve been easily solved had I noticed it at the beginning. Plus, when you write a section of code for the second time you have a better understanding of how it should work, and can salvage pieces of the old code to speed up the process.</p>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="http://www.jakecaspick.com/post/ztower/" title="ZTower - My First HTML5 Game">
+      Previous
+    </a>
+    
+
+    
+
+  
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+
+</div>
+
+
+  
+
+</div>
+
+</footer>
+
+    </main>
+    
+
+
+<script src="http://www.jakecaspick.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+</html>
+

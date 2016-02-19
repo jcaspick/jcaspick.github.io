@@ -6,8 +6,61 @@
     <description>Recent content in Posts on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Feb 2016 12:08:56 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 19 Feb 2016 10:44:30 -0400</lastBuildDate>
     <atom:link href="http://www.jakecaspick.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Endless Rainbow Road - A Procedural Racetrack Generator</title>
+      <link>http://www.jakecaspick.com/post/endlessroad/</link>
+      <pubDate>Fri, 19 Feb 2016 10:44:30 -0400</pubDate>
+      
+      <guid>http://www.jakecaspick.com/post/endlessroad/</guid>
+      <description>
+
+&lt;p&gt;Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&amp;rsquo;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.&lt;/p&gt;
+
+&lt;p&gt;This week I built a prototype to test this idea.  You can play it &lt;a href=&#34;http://www.jakecaspick.com/ProceduralRacer/&#34;&gt;here&lt;/a&gt; and view the source code &lt;a href=&#34;https://github.com/jcaspick/ProceduralRacer&#34;&gt;on github&lt;/a&gt;.  Read on for a post mortem of the project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/racer1.png&#34; alt=&#34;Infinite Rainbow Road!&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-idea:73894c868b704a69ebaf87d27a1403d5&#34;&gt;The Idea&lt;/h1&gt;
+
+&lt;p&gt;A racetrack is conceptually a very simple object. It is essentially a ribbon, a flat surface extruded along a path. My first thought was to use splines or bezier curves (which are just a specific type of spline). I could randomly generate a series of points and interpolate curves between them to get the center line of the racetrack. Then I could offset curves on either side and draw geometry between the curves.&lt;/p&gt;
+
+&lt;h1 id=&#34;problem-1:73894c868b704a69ebaf87d27a1403d5&#34;&gt;Problem #1&lt;/h1&gt;
+
+&lt;p&gt;The big problem with splines, and it is an especially big problem in the context of a racing game, is that there is no simple way to determine their length. The simplest workaround is to approximate the curve with a series of straight line segments, but even that seemed like a lot of work for a less than ideal result.&lt;/p&gt;
+
+&lt;p&gt;On top of that, it turns out it is non-trivial to offset a curve from a spline such that the space in between the two curves has a constant width. It can be done, however the catch is that the offset curve of a spline cannot itself be represented as a spline. In other words, there would be no simple way to take a point on the center spline and find the corresponding point on the offset curve, which I would need to do to place vertices. (&lt;a href=&#34;http://stackoverflow.com/questions/4148831/how-to-offset-a-cubic-bezier-curve&#34;&gt;more information in this Stack Overflow discussion.&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;I scrapped the idea of using splines pretty quickly.&lt;/p&gt;
+
+&lt;h1 id=&#34;the-solution:73894c868b704a69ebaf87d27a1403d5&#34;&gt;The Solution&lt;/h1&gt;
+
+&lt;p&gt;My research led me to two articles which were absolute goldmines of information. &lt;a href=&#34;http://www.redblobgames.com/articles/curved-paths/&#34;&gt;The first article&lt;/a&gt;
+ deals with the problem of drawing curved roads in a Sim City type game, &lt;a href=&#34;http://www.learn-cocos2d.com/2012/07/starting-point-train-game-freeform-tracks/&#34;&gt;the second&lt;/a&gt; deals with drawing curved tracks for a train simulator. Both were very similar to what I was trying to do, and both began by addressing the problems of using bezier curves.&lt;/p&gt;
+
+&lt;p&gt;Both articles make the case for circular arcs as an alternative to splines, and that is what I ended up using for my game. With circular arcs it is trivial to calculate distance and to make perfect offsets. They are also more visually pleasing (and actually closely resemble the curvature of real-world roads and train tracks which are modelled with &lt;a href=&#34;https://en.wikipedia.org/wiki/Euler_spiral&#34;&gt;Euler Spirals&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h1 id=&#34;problem-2:73894c868b704a69ebaf87d27a1403d5&#34;&gt;Problem #2&lt;/h1&gt;
+
+&lt;p&gt;Building a single arc segment object was quite simple. The object takes a starting point, starting angle, radius, and end angle and generates a mesh (&lt;a href=&#34;http://catlikecoding.com/unity/tutorials/procedural-grid/&#34;&gt;this tutorial&lt;/a&gt; was very helpful for the mesh building part.)&lt;/p&gt;
+
+&lt;p&gt;When I tried to string several arc segments together into a track, I encountered a frustrating problem that has to do with converting between a right-handed and left-handed coordinate system. I was using simple trigonometry to calculate points on my arcs. An angle of zero degrees points toward the positive X axis, and angles increase in a counterclockwise direction. However, in Unity an angle of zero degrees on the XZ plane points toward positive Z, and angles increase going clockwise.  As a result, none of my arcs were lining up properly.&lt;/p&gt;
+
+&lt;h1 id=&#34;the-solution-1:73894c868b704a69ebaf87d27a1403d5&#34;&gt;The Solution&lt;/h1&gt;
+
+&lt;p&gt;At first I tried to compensate for the difference in coordinate systems by writing conversion functions between them, but by this time my code was a tangled mess. I was passing data around, manipulating it with trigonometry and then converting it into Unity rotations by using the AngleAxis and Euler functions of Quaternions. It was difficult to pinpoint exactly where the conversion problem originated from, and any time I thought I had solved it I was breaking something else that I wouldn&amp;rsquo;t notice until later.&lt;/p&gt;
+
+&lt;p&gt;I decided to rewrite the code from scratch. This time, to keep things simple and consistent, I didn&amp;rsquo;t apply any rotations to the arc objects whatsoever. To connect two arcs together seamlessly, I offset the starting angle of the second arc to match the ending angle of the first.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-i-learned:73894c868b704a69ebaf87d27a1403d5&#34;&gt;What I Learned&lt;/h1&gt;
+
+&lt;p&gt;On the practical side, I learned two important new Unity skills. The first being the ability to generate geometry and UV coordinates from code, which is an extremely powerful tool. Secondly, a more subtle but equally powerful tool is writing extension methods to add functionality to built-in Unity classes (specifically, I needed a simple way to get just the X and Z components of a &lt;code&gt;Vector3&lt;/code&gt; for certain calculations.)&lt;/p&gt;
+
+&lt;p&gt;I also learned, after much frustrated troubleshooting, that sometimes the best solution to a problem is to start over. It&amp;rsquo;s not fun to start over, but it&amp;rsquo;s even less fun to write code bandaids to try and fix a low-level problem that could&amp;rsquo;ve been easily solved had I noticed it at the beginning. Plus, when you write a section of code for the second time you have a better understanding of how it should work, and can salvage pieces of the old code to speed up the process.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ZTower - My First HTML5 Game</title>
@@ -17,7 +70,7 @@
       <guid>http://www.jakecaspick.com/post/ztower/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/ztower.png&#34; alt=&#34;ZTower&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a simple game I wrote in the summer of 2015 when I was first learning Javascript.  I created it using the Phaser game library.  You can &lt;a href=&#34;https://jcaspick.github.io/ytower/&#34;&gt;play the game here&lt;/a&gt; and you can find the &lt;a href=&#34;https://github.com/jcaspick/ytower&#34;&gt;source code on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is a simple game I wrote in the summer of 2015 when I was first learning Javascript. I created it using the Phaser game library. You can &lt;a href=&#34;https://jcaspick.github.io/ytower/&#34;&gt;play the game here&lt;/a&gt; and you can find the &lt;a href=&#34;https://github.com/jcaspick/ytower&#34;&gt;source code on GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -27,9 +80,9 @@
       <pubDate>Thu, 11 Feb 2016 11:46:35 -0400</pubDate>
       
       <guid>http://www.jakecaspick.com/post/raymarching/</guid>
-      <description>&lt;p&gt;I recently learned about an interesting technique for rendering 3D images, known as &lt;em&gt;raymarching distance fields&lt;/em&gt;.  This technique became popular in the demoscene for its power and simplicity.  It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code.  An excellent explanation of how the algorithm works can be found &lt;a href=&#34;http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html&#34;&gt;here&lt;/a&gt; and many working examples can be found on &lt;a href=&#34;https://www.shadertoy.com/view/Xds3zN&#34;&gt;Shadertoy&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found &lt;a href=&#34;http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html&#34;&gt;here&lt;/a&gt; and many working examples can be found on &lt;a href=&#34;https://www.shadertoy.com/view/Xds3zN&#34;&gt;Shadertoy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve been writing a raymarcher in Processing.  This project has given me a more detailed understanding of the algorithm and a &lt;em&gt;lot&lt;/em&gt; of practice with vector math in 3D space.  Even in it&amp;rsquo;s current bare-bones state, it is capable of generating some really cool images.  The most fun use of the program that I&amp;rsquo;ve discovered is creating these infinite tunnel gifs.&lt;/p&gt;
+&lt;p&gt;I wanted to explore this technique in more depth. The best way to understand how something works is to take it apart and put it back together, so I decided to write my own raymarcher in Processing by porting code from the above links. This project has given me a more detailed understanding of 3D rendering and a &lt;em&gt;lot&lt;/em&gt; of practice with vector math in 3D space. Even in it&amp;rsquo;s current bare-bones state, it is capable of generating some very cool images.  The most fun use of the program that I&amp;rsquo;ve discovered is creating these infinite tunnel gifs.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/raymarch1.gif&#34; alt=&#34;raymarch1&#34; /&gt;
 &lt;img src=&#34;http://www.jakecaspick.com/img/raymarch2.gif&#34; alt=&#34;raymarch2&#34; /&gt;
