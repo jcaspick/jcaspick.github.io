@@ -6,11 +6,31 @@
     <description>Recent content on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Feb 2016 20:19:48 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 01 Mar 2016 10:51:56 -0400</lastBuildDate>
     <atom:link href="http://www.jakecaspick.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Update - Procedural Racing Game</title>
+      <title>Racing Game Update - Recursive Functions and Stylish Hovercars</title>
+      <link>http://www.jakecaspick.com/post/racerupdate2/</link>
+      <pubDate>Tue, 01 Mar 2016 10:51:56 -0400</pubDate>
+      
+      <guid>http://www.jakecaspick.com/post/racerupdate2/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &amp;ldquo;flat pass&amp;rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &amp;ldquo;height pass&amp;rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.&lt;/p&gt;
+
+&lt;p&gt;It was overly complicated and didn&amp;rsquo;t work.&lt;/p&gt;
+
+&lt;p&gt;So I tried a different solution which is almost the exact opposite: generate the track piece-by-piece evaluating each step and proceeding only if the path is clear. To accomplish this I used recursively nested coroutines, allowing a certain number of &amp;ldquo;tries&amp;rdquo; at each step before backtracking to a previous one. I enjoy solving problems with recursion and had a lot of fun writing this algorithm. Here&amp;rsquo;s a video of the new track generator in action, I find it quite satisfying to watch.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/156899587&#34; width=&#34;720&#34; height=&#34;400&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;I also created a texture for the hovercar from the last update!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/uAEwsdi.gif&#34; alt=&#34;stylish hovercar&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Racing Game Update - Progress on the Track Generator</title>
       <link>http://www.jakecaspick.com/post/racerupdate1/</link>
       <pubDate>Wed, 24 Feb 2016 20:19:48 -0400</pubDate>
       
@@ -44,6 +64,8 @@
       
       <guid>http://www.jakecaspick.com/post/endlessroad/</guid>
       <description>
+
+&lt;h1 id=&#34;play-proceduralracer-view-source-code-https-github-com-jcaspick-proceduralracer:73894c868b704a69ebaf87d27a1403d5&#34;&gt;- &lt;a href=&#34;http://www.jakecaspick.com/ProceduralRacer/&#34;&gt;Play&lt;/a&gt; - &lt;a href=&#34;https://github.com/jcaspick/ProceduralRacer&#34;&gt;View Source Code&lt;/a&gt; -&lt;/h1&gt;
 
 &lt;p&gt;Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&amp;rsquo;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.&lt;/p&gt;
 

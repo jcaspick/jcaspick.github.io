@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Racing Game Update - Progress on the Track Generator  &middot; Jake Caspick</title>
+  <title>Racing Game Update - Recursive Functions and Stylish Hovercars  &middot; Jake Caspick</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -17,16 +17,16 @@
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Racing Game Update - Progress on the Track Generator  &middot; Jake Caspick ">
+<meta property="og:title" content="Racing Game Update - Recursive Functions and Stylish Hovercars  &middot; Jake Caspick ">
 <meta property="og:site_name" content="Jake Caspick"/>
-<meta property="og:url" content="http://www.jakecaspick.com/post/racerupdate1/" />
+<meta property="og:url" content="http://www.jakecaspick.com/post/racerupdate2/" />
 <meta property="og:locale" content="en-us">
 
 
 <meta property="og:type" content="article" />
 <meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2016-02-24T20:19:48-04:00" />
-<meta property="og:article:modified_time" content="2016-02-24T20:19:48-04:00" />
+<meta property="og:article:published_time" content="2016-03-01T10:51:56-04:00" />
+<meta property="og:article:modified_time" content="2016-03-01T10:51:56-04:00" />
 
   
 
@@ -34,9 +34,9 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@" />
-<meta name="twitter:title" content="Racing Game Update - Progress on the Track Generator" />
+<meta name="twitter:title" content="Racing Game Update - Recursive Functions and Stylish Hovercars" />
 <meta name="twitter:description" content="" />
-<meta name="twitter:url" content="http://www.jakecaspick.com/post/racerupdate1/" />
+<meta name="twitter:url" content="http://www.jakecaspick.com/post/racerupdate2/" />
 <meta name="twitter:domain" content="http://www.jakecaspick.com">
   
 
@@ -44,20 +44,20 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Racing Game Update - Progress on the Track Generator",
+    "headline": "Racing Game Update - Recursive Functions and Stylish Hovercars",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+?rel=author"
     },
-    "datePublished": "2016-02-24",
+    "datePublished": "2016-03-01",
     "description": "",
-    "wordCount":  339 
+    "wordCount":  185 
   }
 </script>
 
 
 
-<link rel="canonical" href="http://www.jakecaspick.com/post/racerupdate1/" />
+<link rel="canonical" href="http://www.jakecaspick.com/post/racerupdate2/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.jakecaspick.com/touch-icon-144-precomposed.png">
 <link href="http://www.jakecaspick.com/favicon.png" rel="icon">
@@ -143,11 +143,11 @@
 
 <article id="main-content" class="container main_content single">
   <header class="container hat">
-  <h1>Racing Game Update - Progress on the Track Generator
+  <h1>Racing Game Update - Recursive Functions and Stylish Hovercars
 </h1>
 
   <div class="metas">
-<time datetime="2016-02-24">24 Feb, 2016</time>
+<time datetime="2016-03-01">1 Mar, 2016</time>
 
 
   
@@ -158,25 +158,17 @@
 </header>
 
   <div class="container content">
-  <p>The track generator in the first prototype of my <a href="http://www.jakecaspick.com/ProceduralRacer/">procedural racing game</a> works like a treadmill. The road is generated ahead of you and disappears behind you as you drive. Constantly creating and destroying objects in a game is bad practice, so I use what is known as an object pool. Rather than constantly spawning new track segments, the ones that disappear behind you are &ldquo;recycled&rdquo; back to the front.</p>
+  <p>I&rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</p>
 
-<p>The problem with this is that the object I was using as a track segment contained the mesh, the parameters that define the shape of the arc, and the methods for reasoning about the arc. This is a problem for two reasons. The first is that building huge classes with too much functionality is a bad coding habit in general. The second and more specific reason is that when a section of track is &ldquo;recycled&rdquo; we permanently lose all data about its previous life. It is impossible to travel backwards or to view the entirety of the track.</p>
+<p>It was overly complicated and didn&rsquo;t work.</p>
 
-<p>I&rsquo;ve written a new and improved track generator that keeps data and meshes separate. I&rsquo;ve also made it more customizable and able to produce different styles of tracks. Here are two examples:</p>
+<p>So I tried a different solution which is almost the exact opposite: generate the track piece-by-piece evaluating each step and proceeding only if the path is clear. To accomplish this I used recursively nested coroutines, allowing a certain number of &ldquo;tries&rdquo; at each step before backtracking to a previous one. I enjoy solving problems with recursion and had a lot of fun writing this algorithm. Here&rsquo;s a video of the new track generator in action, I find it quite satisfying to watch.</p>
 
-<p><img src="http://www.jakecaspick.com/img/racer2.png" alt="New Track Generation" /></p>
+<p><iframe src="https://player.vimeo.com/video/156899587" width="720" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p></p></p>
 
-<p>These settings produce constantly winding roads similar to the first prototype.</p>
+<p>I also created a texture for the hovercar from the last update!</p>
 
-<p><img src="http://www.jakecaspick.com/img/racer3.png" alt="New Track Generation" /></p>
-
-<p>These settings make long straight sections punctuated by sharp turns.</p>
-
-<p>The next problem to solve is preventing the track from intersecting itself when it makes loops. In the first prototype I cheated and made the track constantly slope downwards so it would never cross itself. My work-in-progress solution involves dividing the world into a 2D grid, counting the amount of times the track passes through each section of the grid, and where several tracks pass through the same section, separating them by a minimum height. The green tiles in the above images are a visualization of that grid.</p>
-
-<p><img src="http://www.jakecaspick.com/img/turntable1.gif" alt="80s style hovercar" /></p>
-
-<p>I&rsquo;ve also been modelling a proper vehicle for the game to replace the lovely capsule primitive that currently fills that role. Think hovercar that looks like a 1980s sports car.</p>
+<p><img src="http://i.imgur.com/uAEwsdi.gif" alt="stylish hovercar" /></p>
 
 </div>
 
@@ -188,15 +180,11 @@
   
 
     
-    <a class="prev" href="http://www.jakecaspick.com/post/endlessroad/" title="Endless Rainbow Road - A Procedural Racetrack Generator">
+    <a class="prev" href="http://www.jakecaspick.com/post/racerupdate1/" title="Racing Game Update - Progress on the Track Generator">
       Previous
     </a>
     
 
-    
-    <a class="next" href="http://www.jakecaspick.com/post/racerupdate2/" title="Racing Game Update - Recursive Functions and Stylish Hovercars">
-      Next
-    </a>
     
 
   
