@@ -6,8 +6,44 @@
     <description>Recent content in Posts on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Mar 2016 11:35:32 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 12 Mar 2016 10:56:32 -0400</lastBuildDate>
     <atom:link href="http://www.jakecaspick.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mini Game Jam #1 - Post Mortem</title>
+      <link>http://www.jakecaspick.com/post/minijam1/</link>
+      <pubDate>Sat, 12 Mar 2016 10:56:32 -0400</pubDate>
+      
+      <guid>http://www.jakecaspick.com/post/minijam1/</guid>
+      <description>
+
+&lt;p&gt;This friday I attended the first of hopefully many mini game jams at Volta Labs. The theme of the game jam was &lt;strong&gt;explosions&lt;/strong&gt;. The time limit: a mere three hours. Building a working game in such a short amount of time is a lot of fun. For a recovering overthinker like myself it&amp;rsquo;s also a great exercise in rapid prototyping and not getting hung up on small details. Working so fast inevitably means that you&amp;rsquo;ll write some silly non-optimized code, but it can also lead to some clever quick solutions to problems you might have otherwise spent too much time one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/bombermang.png&#34; alt=&#34;3-hour Bomberman!&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The game I wrote was a simple Bomberman clone. For those not familiar with Bomberman, the objective of the game is to explode your opponents and to not get exploded yourself. Your weapon is the ability to place bombs on the ground which explode after a few seconds in a signature cross shaped pattern. The battlefield is filled with destructible blocks which sometimes release powerups. The two basic powerups that I wanted to include in my game are one that increases the amount of bombs you can place, and one that increases the size of their explosions.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m pleased with the result of this game jam. I budgeted my time well and finished the game just before the deadline, including a last second bug fix and rebuild. I&amp;rsquo;m not going to write a detailed post mortem for such a simple game, but here are a few highlights:&lt;/p&gt;
+
+&lt;h1 id=&#34;best-code-i-wrote-the-bombs:43da3ec887d61198fd28cbb991fa8f15&#34;&gt;Best Code I Wrote - The Bombs&lt;/h1&gt;
+
+&lt;p&gt;One of the quirky things about Bomberman is that when you place a bomb it appears on the same tile you&amp;rsquo;re standing on, but once you exit that tile they block your path. I wasn&amp;rsquo;t originally going to include this feature in my clone because it seemed like sort of an odd thing to program. Then I got the idea of giving the bombs a &lt;code&gt;2DCollider&lt;/code&gt; component that was originally set to be a trigger, and use the &lt;code&gt;OnTriggerExit2D&lt;/code&gt; event to change it to a regular collider when the player exits that space. It worked exactly as I wanted it to on the very first try which is a rare and satisfying thing when experimenting with new code ideas.&lt;/p&gt;
+
+&lt;p&gt;I also got to use my favorite coding pattern, recursive functions, to make the cross-shaped explosions. The recursive explosion function checks the space adjacent to it in a particular direction. If the space is empty it calls itself on that space. If the space has a destructible block it destroys the block. By increasing the depth of recursion before the function collapses, I get the bigger-explosion powerup for free!&lt;/p&gt;
+
+&lt;h1 id=&#34;silliest-code-i-wrote-player-2:43da3ec887d61198fd28cbb991fa8f15&#34;&gt;Silliest Code I Wrote - Player 2&lt;/h1&gt;
+
+&lt;p&gt;My first goal was simply to get the game working with a single player. When that was finished and I realized I still had a bit of time left, I added a second player to make it into an actual game. The problem was that all the important game variables keeping track of things such as how many bombs you had placed were just global variables. I could&amp;rsquo;ve gone back and modified the functions to take a &lt;code&gt;player&lt;/code&gt; argument and keep separate variables for each player. That would&amp;rsquo;ve been the smart thing to do. It probably wouldn&amp;rsquo;t have even taken that long.&lt;/p&gt;
+
+&lt;p&gt;The thing that I did instead was to make a second instance of the entire game, minus the code that generated the level. So each player has it&amp;rsquo;s own copy of the entire &lt;code&gt;GameManager&lt;/code&gt; object including a bunch of redundant information! Anything goes in a 3 hour jam, right?&lt;/p&gt;
+
+&lt;h1 id=&#34;head-on-desk-moment-decimal-points:43da3ec887d61198fd28cbb991fa8f15&#34;&gt;Head-On-Desk Moment - Decimal Points&lt;/h1&gt;
+
+&lt;p&gt;The very first thing I did was create the game board. The board is a 2-dimensional array of integer values. To draw it, iterate over the array and use a dictionary object to fetch the corresponding game object for each integer. My lovely MSPaint graphics were 32 x 32 pixels each. So of course, for the position of each tile I multiplied the x and y coordinate of the array by a multiplier which I of course set to &lt;strong&gt;32&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;When I tested the game I saw a single tile in the middle of the screen. After some frustrated troubleshooting of code that looked perfectly fine - &amp;ldquo;how can the game be broken already I&amp;rsquo;ve barely written anything?&amp;rdquo; - I remembered that &lt;strong&gt;32 Unity units != 32 pixels&lt;/strong&gt;. My code was working just fine, it&amp;rsquo;s just that the tiles were one hundred times further apart than they ought to be, and thus only the one at [0, 0] was visible on the screen.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Racing Game Update - Arcade Physics &amp; Adventures in Quaternions</title>
