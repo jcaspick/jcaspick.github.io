@@ -6,8 +6,32 @@
     <description>Recent content in Posts on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Mar 2016 10:56:32 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 12 Mar 2016 10:57:31 -0400</lastBuildDate>
     <atom:link href="http://www.jakecaspick.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ruedehue Pre-Alpha Demo</title>
+      <link>http://www.jakecaspick.com/post/ruedehue1/</link>
+      <pubDate>Sat, 12 Mar 2016 10:57:31 -0400</pubDate>
+      
+      <guid>http://www.jakecaspick.com/post/ruedehue1/</guid>
+      <description>
+
+&lt;h1 id=&#34;play-online-ruedehueprealpha:dc77f747b8a6d69c7196efd69954c0d9&#34;&gt;&lt;a href=&#34;http://www.jakecaspick.com/RuedehuePreAlpha/&#34;&gt;Play Online&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;download-for-windows-https-drive-google-com-file-d-0b3si6s5r54j6ahvocm1zrmfwemc-view-usp-sharing:dc77f747b8a6d69c7196efd69954c0d9&#34;&gt;&lt;a href=&#34;https://drive.google.com/file/d/0B3si6S5r54J6aHVOcm1ZRmFwemc/view?usp=sharing&#34;&gt;Download For Windows&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;download-for-mac-https-drive-google-com-file-d-0b3si6s5r54j6rur2dgfnsgjlqke-view-usp-sharing:dc77f747b8a6d69c7196efd69954c0d9&#34;&gt;&lt;a href=&#34;https://drive.google.com/file/d/0B3si6S5r54J6RUR2dGFNSGJlQkE/view?usp=sharing&#34;&gt;Download For Mac&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;CONTROLS:&lt;/strong&gt; Ideally this game should be played with an Xbox controller, using &amp;lsquo;A&amp;rsquo; to accelerate and the right bumper to drift. For those without Xbox controllers you can drive with the arrow keys and drift with the space bar. I can&amp;rsquo;t say for sure if other types of controllers will work because the input handling at this stage is of the just-works-enough-so-I-can-test-the-game variety.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/prealphascreenshot.png&#34; alt=&#34;ruedehue pre alpha screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This project has come a long way from the &lt;a href=&#34;http://www.jakecaspick.com/post/endlessroad/&#34;&gt;first prototype&lt;/a&gt; of a capsule primitive sliding down an endless road and I&amp;rsquo;m finally ready to share a new playable demo. Unfortunately there is yet no actual racing in this racing game as this is still only a single player demo. Multiplayer split-screen racing is the final core feature that needs to be implemented and is at the top of my priority list.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quick Race&lt;/strong&gt; mode generates a course with some reasonable preset parameters and immediately starts a game. &lt;strong&gt;Custom Race&lt;/strong&gt; mode allows you to experiment with the track generator and perhaps generate a course with some ridiculous and unreasonable parameters (large minimum length + small world size results in some tangled messes.)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Mini Game Jam #1 - Post Mortem</title>
