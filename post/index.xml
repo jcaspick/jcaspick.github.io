@@ -2,96 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Jake Caspick</title>
-    <link>https://example.com/post/</link>
+    <link>https://www.jakecaspick.com/post/</link>
     <description>Recent content in Blog on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Mar 2016 10:57:31 -0400</lastBuildDate>
     
-	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.jakecaspick.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ruedehue Pre-Alpha Demo</title>
-      <link>https://example.com/post/ruedehue1/</link>
+      <link>https://www.jakecaspick.com/post/ruedehue1/</link>
       <pubDate>Sat, 12 Mar 2016 10:57:31 -0400</pubDate>
       
-      <guid>https://example.com/post/ruedehue1/</guid>
+      <guid>https://www.jakecaspick.com/post/ruedehue1/</guid>
       <description>Play Online Download For Windows Download For Mac CONTROLS: Ideally this game should be played with an Xbox controller, using &amp;lsquo;A&amp;rsquo; to accelerate and the right bumper to drift. For those without Xbox controllers you can drive with the arrow keys and drift with the space bar. I can&#39;t say for sure if other types of controllers will work because the input handling at this stage is of the just-works-enough-so-I-can-test-the-game variety.</description>
     </item>
     
     <item>
       <title>Mini Game Jam #1 - Post Mortem</title>
-      <link>https://example.com/post/minijam1/</link>
+      <link>https://www.jakecaspick.com/post/minijam1/</link>
       <pubDate>Sat, 12 Mar 2016 10:56:32 -0400</pubDate>
       
-      <guid>https://example.com/post/minijam1/</guid>
+      <guid>https://www.jakecaspick.com/post/minijam1/</guid>
       <description>This friday I attended the first of hopefully many mini game jams at Volta Labs. The theme of the game jam was explosions. The time limit: a mere three hours. Building a working game in such a short amount of time is a lot of fun. For a recovering overthinker like myself it&#39;s also a great exercise in rapid prototyping and not getting hung up on small details. Working so fast inevitably means that you&#39;ll write some silly non-optimized code, but it can also lead to some clever quick solutions to problems you might have otherwise spent too much time one.</description>
     </item>
     
     <item>
       <title>Racing Game Update - Arcade Physics &amp; Adventures in Quaternions</title>
-      <link>https://example.com/post/racerupdate3/</link>
+      <link>https://www.jakecaspick.com/post/racerupdate3/</link>
       <pubDate>Thu, 03 Mar 2016 11:35:32 -0400</pubDate>
       
-      <guid>https://example.com/post/racerupdate3/</guid>
+      <guid>https://www.jakecaspick.com/post/racerupdate3/</guid>
       <description>The game finally has a driveable vehicle! The biggest challenge in this latest update was solving the tricky problem of getting the car to stick to the track and have correct rotations relative to the road surface while moving and steering. Another small but important addition is the guardrails which help to improve the sense of speed as they fly by.
 I&#39;ll be releasing a playable OpenGL build soon, there are a couple more features I want to add, including some options on the main menu to let you adjust parameters of the track generator.</description>
     </item>
     
     <item>
       <title>Racing Game Update - Recursive Functions and Stylish Hovercars</title>
-      <link>https://example.com/post/racerupdate2/</link>
+      <link>https://www.jakecaspick.com/post/racerupdate2/</link>
       <pubDate>Tue, 01 Mar 2016 10:51:56 -0400</pubDate>
       
-      <guid>https://example.com/post/racerupdate2/</guid>
+      <guid>https://www.jakecaspick.com/post/racerupdate2/</guid>
       <description>I&#39;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &amp;ldquo;flat pass&amp;rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &amp;ldquo;height pass&amp;rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</description>
     </item>
     
     <item>
       <title>Racing Game Update - Progress on the Track Generator</title>
-      <link>https://example.com/post/racerupdate1/</link>
+      <link>https://www.jakecaspick.com/post/racerupdate1/</link>
       <pubDate>Wed, 24 Feb 2016 20:19:48 -0400</pubDate>
       
-      <guid>https://example.com/post/racerupdate1/</guid>
+      <guid>https://www.jakecaspick.com/post/racerupdate1/</guid>
       <description>The track generator in the first prototype of my procedural racing game works like a treadmill. The road is generated ahead of you and disappears behind you as you drive. Constantly creating and destroying objects in a game is bad practice, so I use what is known as an object pool. Rather than constantly spawning new track segments, the ones that disappear behind you are &amp;ldquo;recycled&amp;rdquo; back to the front.</description>
     </item>
     
     <item>
       <title>Endless Rainbow Road - A Procedural Racetrack Generator</title>
-      <link>https://example.com/post/endlessroad/</link>
+      <link>https://www.jakecaspick.com/post/endlessroad/</link>
       <pubDate>Fri, 19 Feb 2016 10:44:30 -0400</pubDate>
       
-      <guid>https://example.com/post/endlessroad/</guid>
+      <guid>https://www.jakecaspick.com/post/endlessroad/</guid>
       <description>- Play - View Source Code - Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&#39;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.
 This week I built a prototype to test this idea. You can play it here and view the source code on github.</description>
     </item>
     
     <item>
       <title>ZTower - My First HTML5 Game</title>
-      <link>https://example.com/post/ztower/</link>
+      <link>https://www.jakecaspick.com/post/ztower/</link>
       <pubDate>Thu, 11 Feb 2016 12:08:56 -0400</pubDate>
       
-      <guid>https://example.com/post/ztower/</guid>
+      <guid>https://www.jakecaspick.com/post/ztower/</guid>
       <description>This is a simple game I wrote in the summer of 2015 when I was first learning Javascript. I created it using the Phaser game library. You can play the game here and you can find the source code on GitHub.</description>
     </item>
     
     <item>
       <title>Creating Infinite Tunnels With Raymarching</title>
-      <link>https://example.com/post/raymarching/</link>
+      <link>https://www.jakecaspick.com/post/raymarching/</link>
       <pubDate>Thu, 11 Feb 2016 11:46:35 -0400</pubDate>
       
-      <guid>https://example.com/post/raymarching/</guid>
+      <guid>https://www.jakecaspick.com/post/raymarching/</guid>
       <description>I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found here and many working examples can be found on Shadertoy.
 I wanted to explore this technique in more depth.</description>
     </item>
     
     <item>
       <title>Global Game Jam 2016 - Writing a Procedural Maze Generator</title>
-      <link>https://example.com/post/gamejam2016/</link>
+      <link>https://www.jakecaspick.com/post/gamejam2016/</link>
       <pubDate>Wed, 10 Feb 2016 11:38:08 -0400</pubDate>
       
-      <guid>https://example.com/post/gamejam2016/</guid>
+      <guid>https://www.jakecaspick.com/post/gamejam2016/</guid>
       <description>This year I participated in the Global Game Jam at Volta Labs.
 The theme of the game jam was ritual. In our group brainstorm we thought of rituals as referring to repetitive behaviors and routines, which got us thinking about robots designed to perform specific functions, which ultimately led to an elaborate and whimsical game idea about amnesiac robots trying to rediscover their purpose.
 Procedurally generated levels were part of the design of the game, and my role in the team was to write the level generator.</description>

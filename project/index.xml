@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Jake Caspick</title>
-    <link>https://example.com/project/</link>
+    <link>https://www.jakecaspick.com/project/</link>
     <description>Recent content in Projects on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 07 Aug 2019 19:07:19 -0300</lastBuildDate>
     
-	<atom:link href="https://example.com/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.jakecaspick.com/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sugarcube</title>
-      <link>https://example.com/project/sugarcube/</link>
+      <link>https://www.jakecaspick.com/project/sugarcube/</link>
       <pubDate>Wed, 07 Aug 2019 19:07:19 -0300</pubDate>
       
-      <guid>https://example.com/project/sugarcube/</guid>
+      <guid>https://www.jakecaspick.com/project/sugarcube/</guid>
       <description>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&#39;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.
 You can download the source code here.</description>
     </item>
