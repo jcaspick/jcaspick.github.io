@@ -1,238 +1,192 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Creating Infinite Tunnels With Raymarching  &middot; Jake Caspick</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Jake Caspick  | Creating Infinite Tunnels With Raymarching</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
 
-<meta name="description" content="" />
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
 
-<meta name="keywords" content="">
+    
 
+    
+      
+    
 
-<meta property="og:title" content="Creating Infinite Tunnels With Raymarching  &middot; Jake Caspick ">
-<meta property="og:site_name" content="Jake Caspick"/>
-<meta property="og:url" content="http://www.jakecaspick.com/post/raymarching/" />
-<meta property="og:locale" content="en-us">
+    
 
-
+    <meta property="og:title" content="Creating Infinite Tunnels With Raymarching" />
+<meta property="og:description" content="I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found here and many working examples can be found on Shadertoy.
+I wanted to explore this technique in more depth." />
 <meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2016-02-11T11:46:35-04:00" />
-<meta property="og:article:modified_time" content="2016-02-11T11:46:35-04:00" />
+<meta property="og:url" content="https://example.com/post/raymarching/" />
+<meta property="article:published_time" content="2016-02-11T11:46:35-04:00" />
+<meta property="article:modified_time" content="2016-02-11T11:46:35-04:00" />
+<meta itemprop="name" content="Creating Infinite Tunnels With Raymarching">
+<meta itemprop="description" content="I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found here and many working examples can be found on Shadertoy.
+I wanted to explore this technique in more depth.">
+<meta itemprop="datePublished" content="2016-02-11T11:46:35-04:00" />
+<meta itemprop="dateModified" content="2016-02-11T11:46:35-04:00" />
+<meta itemprop="wordCount" content="194">
 
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creating Infinite Tunnels With Raymarching"/>
+<meta name="twitter:description" content="I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found here and many working examples can be found on Shadertoy.
+I wanted to explore this technique in more depth."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
   
 
   
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@" />
-<meta name="twitter:creator" content="@" />
-<meta name="twitter:title" content="Creating Infinite Tunnels With Raymarching" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:url" content="http://www.jakecaspick.com/post/raymarching/" />
-<meta name="twitter:domain" content="http://www.jakecaspick.com">
   
+  <header class="bg-repeated" style="background-image: url('https://example.com/images/bg.png'); background-repeat: repeat; background-size: auto">
+    <div class="bg-black-60">
+      <nav class="pv4 ph3 ph4-ns" role="navigation">
+  <div class="flex flex-column items-center">
+    <a href="https://example.com" class="f3 fw2 f1-ns hover-white no-underline white-90 dib courier">
+      Jake Caspick
+    </a>
+      <a class="dn di-ns f5 fw2 white-70 pv2 courier">programmer - artist - general cg nerd</a>
+    <div class="flex items-center">
+      
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "headline": "Creating Infinite Tunnels With Raymarching",
-    "author": {
-      "@type": "Person",
-      "name": "http://profiles.google.com/+?rel=author"
-    },
-    "datePublished": "2016-02-11",
-    "description": "",
-    "wordCount":  194 
-  }
-</script>
-
-
-
-<link rel="canonical" href="http://www.jakecaspick.com/post/raymarching/" />
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.jakecaspick.com/touch-icon-144-precomposed.png">
-<link href="http://www.jakecaspick.com/favicon.png" rel="icon">
-
-<meta name="generator" content="Hugo 0.15" />
-
-  <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://www.jakecaspick.com/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://www.jakecaspick.com/css/style.css">
-<link rel="stylesheet" href="http://www.jakecaspick.com/css/highlight/github.css">
-
-  
-</head>
-<body>
-  <main id="main-wrapper" class="container main_wrapper has-sidebar">
-    <header id="main-header" class="container main_header">
-  <div class="container brand">
-  <div class="container title h1-like">
-  <a class="baselink" href="http://www.jakecaspick.com">
-  Jake Caspick
-
-</a>
-
-</div>
-
-  
-<div class="container topline">
-  
-  Learn by making things
+      
+        <ul class="ph0 pt3 mv0">
+          
+          <li class="list f5 f3-ns fw4 dib ph3">
+            <a class="hover-white no-underline white-90" href="/post/" title="Blog page">
+              Blog
+            </a>
+          </li>
+          
+          <li class="list f5 f3-ns fw4 dib ph3">
+            <a class="hover-white no-underline white-90" href="/project/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f3-ns fw4 dib ph3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f3-ns fw4 dib ph3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
 
 
-</div>
 
 
-</div>
-
-  <nav class="container nav primary no-print">
-  
 
 
-  
-<a href="http://www.jakecaspick.com/about">About</a>
 
-<a href="http://www.jakecaspick.com/post">Posts</a>
 
+
+
+
+    </div>
+  </div>
 </nav>
 
-<div class="container nav secondary no-print">
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
   
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
 
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOG
+      </p>
+      <h1 class="f1 athelas mb1">Creating Infinite Tunnels With Raymarching</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-02-11T11:46:35-04:00">February 11, 2016</time>
+      
+      
+    </header>
 
-<a id="contact-link-github" class="contact_link" href="https://github.com/jcaspick">
-  <span class="fa fa-github-square"></span><span>github</span></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><p>I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found <a href="http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html">here</a> and many working examples can be found on <a href="https://www.shadertoy.com/view/Xds3zN">Shadertoy</a>.</p>
+<p>I wanted to explore this technique in more depth. The best way to understand how something works is to take it apart and put it back together, so I decided to write my own raymarcher in Processing by porting code from the above links. This project has given me a more detailed understanding of 3D rendering and a <em>lot</em> of practice with vector math in 3D space. Even in it's current bare-bones state, it is capable of generating some very cool images.  The most fun use of the program that I've discovered is creating these infinite tunnel gifs.</p>
+<p><img src="/img/raymarch1.gif" alt="raymarch1">
+<img src="/img/raymarch2.gif" alt="raymarch2">
+<img src="/img/protoplasm.gif" alt="protoplasm">
+<img src="/img/clockwerk.gif" alt="clockwerk"></p>
+<p>You can view the source code <a href="https://github.com/jcaspick/processing-raymarcher">on GitHub</a>.  I've tried to organize the code in a readable way, and written lots of comments explaining how the different parts work.</p>
+<ul class="pa0">
   
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
 
-</header>
-
-
-<article id="main-content" class="container main_content single">
-  <header class="container hat">
-  <h1>Creating Infinite Tunnels With Raymarching
-</h1>
-
-  <div class="metas">
-<time datetime="2016-02-11">11 Feb, 2016</time>
+    <aside class="w-30-l mt6-l">
 
 
-  
 
 
-</div>
+</aside>
 
-</header>
-
-  <div class="container content">
-  <p>I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found <a href="http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html">here</a> and many working examples can be found on <a href="https://www.shadertoy.com/view/Xds3zN">Shadertoy</a>.</p>
-
-<p>I wanted to explore this technique in more depth. The best way to understand how something works is to take it apart and put it back together, so I decided to write my own raymarcher in Processing by porting code from the above links. This project has given me a more detailed understanding of 3D rendering and a <em>lot</em> of practice with vector math in 3D space. Even in it&rsquo;s current bare-bones state, it is capable of generating some very cool images.  The most fun use of the program that I&rsquo;ve discovered is creating these infinite tunnel gifs.</p>
-
-<p><img src="http://www.jakecaspick.com/img/raymarch1.gif" alt="raymarch1" />
-<img src="http://www.jakecaspick.com/img/raymarch2.gif" alt="raymarch2" />
-<img src="http://www.jakecaspick.com/img/protoplasm.gif" alt="protoplasm" />
-<img src="http://www.jakecaspick.com/img/clockwerk.gif" alt="clockwerk" /></p>
-
-<p>You can view the source code <a href="https://github.com/jcaspick/processing-raymarcher">on GitHub</a>.  I&rsquo;ve tried to organize the code in a readable way, and written lots of comments explaining how the different parts work.</p>
-
-</div>
-
-
-  <footer class="container">
-  <div class="container navigation no-print">
-  <h2>Navigation</h2>
-  
-  
-
-    
-    <a class="prev" href="http://www.jakecaspick.com/post/gamejam2016/" title="Global Game Jam 2016 - Writing a Procedural Maze Generator">
-      Previous
-    </a>
-    
-
-    
-    <a class="next" href="http://www.jakecaspick.com/post/ztower/" title="ZTower - My First HTML5 Game">
-      Next
-    </a>
-    
-
-  
-
-
-</div>
-
-</footer>
-
-</article>
-      <footer id="main-footer" class="container main_footer">
-  
-
-  <div class="container nav foot no-print">
-  
-
-  <a class="toplink" href="#">back to top</a>
-
-</div>
-
-  <div class="container credits">
-  
-<div class="container footline">
-  
-
-</div>
-
-
-  
-
-</div>
-
-</footer>
+  </article>
 
     </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.com" >
+    &copy; 2020 Jake Caspick
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
     
 
-
-<script src="http://www.jakecaspick.com/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
 
 
-
-
-    
   </body>
 </html>
-

@@ -1,328 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jake Caspick</title>
-    <link>http://www.jakecaspick.com/post/</link>
-    <description>Recent content in Posts on Jake Caspick</description>
+    <title>Blog on Jake Caspick</title>
+    <link>https://example.com/post/</link>
+    <description>Recent content in Blog on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Mar 2016 10:57:31 -0400</lastBuildDate>
-    <atom:link href="http://www.jakecaspick.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Ruedehue Pre-Alpha Demo</title>
-      <link>http://www.jakecaspick.com/post/ruedehue1/</link>
+      <link>https://example.com/post/ruedehue1/</link>
       <pubDate>Sat, 12 Mar 2016 10:57:31 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/ruedehue1/</guid>
-      <description>
-
-&lt;h1 id=&#34;play-online-ruedehueprealpha:dc77f747b8a6d69c7196efd69954c0d9&#34;&gt;&lt;a href=&#34;http://www.jakecaspick.com/RuedehuePreAlpha/&#34;&gt;Play Online&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h1 id=&#34;download-for-windows-https-drive-google-com-file-d-0b3si6s5r54j6ahvocm1zrmfwemc-view-usp-sharing:dc77f747b8a6d69c7196efd69954c0d9&#34;&gt;&lt;a href=&#34;https://drive.google.com/file/d/0B3si6S5r54J6aHVOcm1ZRmFwemc/view?usp=sharing&#34;&gt;Download For Windows&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h1 id=&#34;download-for-mac-https-drive-google-com-file-d-0b3si6s5r54j6rur2dgfnsgjlqke-view-usp-sharing:dc77f747b8a6d69c7196efd69954c0d9&#34;&gt;&lt;a href=&#34;https://drive.google.com/file/d/0B3si6S5r54J6RUR2dGFNSGJlQkE/view?usp=sharing&#34;&gt;Download For Mac&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;CONTROLS:&lt;/strong&gt; Ideally this game should be played with an Xbox controller, using &amp;lsquo;A&amp;rsquo; to accelerate and the right bumper to drift. For those without Xbox controllers you can drive with the arrow keys and drift with the space bar. I can&amp;rsquo;t say for sure if other types of controllers will work because the input handling at this stage is of the just-works-enough-so-I-can-test-the-game variety.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/prealphascreenshot.png&#34; alt=&#34;ruedehue pre alpha screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This project has come a long way from the &lt;a href=&#34;http://www.jakecaspick.com/post/endlessroad/&#34;&gt;first prototype&lt;/a&gt; of a capsule primitive sliding down an endless road and I&amp;rsquo;m finally ready to share a new playable demo. Unfortunately there is yet no actual racing in this racing game as this is still only a single player demo. Multiplayer split-screen racing is the final core feature that needs to be implemented and is at the top of my priority list.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Quick Race&lt;/strong&gt; mode generates a course with some reasonable preset parameters and immediately starts a game. &lt;strong&gt;Custom Race&lt;/strong&gt; mode allows you to experiment with the track generator and perhaps generate a course with some ridiculous and unreasonable parameters (large minimum length + small world size results in some tangled messes.)&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/ruedehue1/</guid>
+      <description>Play Online Download For Windows Download For Mac CONTROLS: Ideally this game should be played with an Xbox controller, using &amp;lsquo;A&amp;rsquo; to accelerate and the right bumper to drift. For those without Xbox controllers you can drive with the arrow keys and drift with the space bar. I can&#39;t say for sure if other types of controllers will work because the input handling at this stage is of the just-works-enough-so-I-can-test-the-game variety.</description>
     </item>
     
     <item>
       <title>Mini Game Jam #1 - Post Mortem</title>
-      <link>http://www.jakecaspick.com/post/minijam1/</link>
+      <link>https://example.com/post/minijam1/</link>
       <pubDate>Sat, 12 Mar 2016 10:56:32 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/minijam1/</guid>
-      <description>
-
-&lt;p&gt;This friday I attended the first of hopefully many mini game jams at Volta Labs. The theme of the game jam was &lt;strong&gt;explosions&lt;/strong&gt;. The time limit: a mere three hours. Building a working game in such a short amount of time is a lot of fun. For a recovering overthinker like myself it&amp;rsquo;s also a great exercise in rapid prototyping and not getting hung up on small details. Working so fast inevitably means that you&amp;rsquo;ll write some silly non-optimized code, but it can also lead to some clever quick solutions to problems you might have otherwise spent too much time one.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/bombermang.png&#34; alt=&#34;3-hour Bomberman!&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The game I wrote was a simple Bomberman clone. For those not familiar with Bomberman, the objective of the game is to explode your opponents and to not get exploded yourself. Your weapon is the ability to place bombs on the ground which explode after a few seconds in a signature cross shaped pattern. The battlefield is filled with destructible blocks which sometimes release powerups. The two basic powerups that I wanted to include in my game are one that increases the amount of bombs you can place, and one that increases the size of their explosions.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m pleased with the result of this game jam. I budgeted my time well and finished the game just before the deadline, including a last second bug fix and rebuild. I&amp;rsquo;m not going to write a detailed post mortem for such a simple game, but here are a few highlights:&lt;/p&gt;
-
-&lt;h1 id=&#34;best-code-i-wrote-the-bombs:43da3ec887d61198fd28cbb991fa8f15&#34;&gt;Best Code I Wrote - The Bombs&lt;/h1&gt;
-
-&lt;p&gt;One of the quirky things about Bomberman is that when you place a bomb it appears on the same tile you&amp;rsquo;re standing on, but once you exit that tile they block your path. I wasn&amp;rsquo;t originally going to include this feature in my clone because it seemed like sort of an odd thing to program. Then I got the idea of giving the bombs a &lt;code&gt;2DCollider&lt;/code&gt; component that was originally set to be a trigger, and use the &lt;code&gt;OnTriggerExit2D&lt;/code&gt; event to change it to a regular collider when the player exits that space. It worked exactly as I wanted it to on the very first try which is a rare and satisfying thing when experimenting with new code ideas.&lt;/p&gt;
-
-&lt;p&gt;I also got to use my favorite coding pattern, recursive functions, to make the cross-shaped explosions. The recursive explosion function checks the space adjacent to it in a particular direction. If the space is empty it calls itself on that space. If the space has a destructible block it destroys the block. By increasing the depth of recursion before the function collapses, I get the bigger-explosion powerup for free!&lt;/p&gt;
-
-&lt;h1 id=&#34;silliest-code-i-wrote-player-2:43da3ec887d61198fd28cbb991fa8f15&#34;&gt;Silliest Code I Wrote - Player 2&lt;/h1&gt;
-
-&lt;p&gt;My first goal was simply to get the game working with a single player. When that was finished and I realized I still had a bit of time left, I added a second player to make it into an actual game. The problem was that all the important game variables keeping track of things such as how many bombs you had placed were just global variables. I could&amp;rsquo;ve gone back and modified the functions to take a &lt;code&gt;player&lt;/code&gt; argument and keep separate variables for each player. That would&amp;rsquo;ve been the smart thing to do. It probably wouldn&amp;rsquo;t have even taken that long.&lt;/p&gt;
-
-&lt;p&gt;The thing that I did instead was to make a second instance of the entire game, minus the code that generated the level. So each player has it&amp;rsquo;s own copy of the entire &lt;code&gt;GameManager&lt;/code&gt; object including a bunch of redundant information! Anything goes in a 3 hour jam, right?&lt;/p&gt;
-
-&lt;h1 id=&#34;head-on-desk-moment-decimal-points:43da3ec887d61198fd28cbb991fa8f15&#34;&gt;Head-On-Desk Moment - Decimal Points&lt;/h1&gt;
-
-&lt;p&gt;The very first thing I did was create the game board. The board is a 2-dimensional array of integer values. To draw it, iterate over the array and use a dictionary object to fetch the corresponding game object for each integer. My lovely MSPaint graphics were 32 x 32 pixels each. So of course, for the position of each tile I multiplied the x and y coordinate of the array by a multiplier which I of course set to &lt;strong&gt;32&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;When I tested the game I saw a single tile in the middle of the screen. After some frustrated troubleshooting of code that looked perfectly fine - &amp;ldquo;how can the game be broken already I&amp;rsquo;ve barely written anything?&amp;rdquo; - I remembered that &lt;strong&gt;32 Unity units != 32 pixels&lt;/strong&gt;. My code was working just fine, it&amp;rsquo;s just that the tiles were one hundred times further apart than they ought to be, and thus only the one at [0, 0] was visible on the screen.&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/minijam1/</guid>
+      <description>This friday I attended the first of hopefully many mini game jams at Volta Labs. The theme of the game jam was explosions. The time limit: a mere three hours. Building a working game in such a short amount of time is a lot of fun. For a recovering overthinker like myself it&#39;s also a great exercise in rapid prototyping and not getting hung up on small details. Working so fast inevitably means that you&#39;ll write some silly non-optimized code, but it can also lead to some clever quick solutions to problems you might have otherwise spent too much time one.</description>
     </item>
     
     <item>
       <title>Racing Game Update - Arcade Physics &amp; Adventures in Quaternions</title>
-      <link>http://www.jakecaspick.com/post/racerupdate3/</link>
+      <link>https://example.com/post/racerupdate3/</link>
       <pubDate>Thu, 03 Mar 2016 11:35:32 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/racerupdate3/</guid>
-      <description>
-
-&lt;p&gt;The game finally has a driveable vehicle! The biggest challenge in this latest update was solving the tricky problem of getting the car to stick to the track and have correct rotations relative to the road surface while moving and steering. Another small but important addition is the guardrails which help to improve the sense of speed as they fly by.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ll be releasing a playable OpenGL build soon, there are a couple more features I want to add, including some options on the main menu to let you adjust parameters of the track generator. For now, here&amp;rsquo;s a video of what the game looks like at this point.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/157473812&#34; width=&#34;600&#34; height=&#34;400&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;Making an arcade racer is difficult because physics engines aren&amp;rsquo;t meant for blatantly physics-defying and unrealistic things involving hovercars. You either have to heavily tweak the physics engine to try and make it behave the way you want, or build your own fake physics from scratch. I chose the latter approach because I like having full control over how things work (or don&amp;rsquo;t work), as opposed to tinkering with a complex pre-built system that I don&amp;rsquo;t know the inner workings of.&lt;/p&gt;
-
-&lt;p&gt;Solving this problem involved learning a lot about quaternions which I previously regarded as mysterious and somewhat intimidating. This is going to be a longer post than usual because I want to take this opportunity to write a bit about one of my favorite subjects: the process of learning in general.&lt;/p&gt;
-
-&lt;h1 id=&#34;knowing-vs-understanding:b762920e564d63abd381744d4823985c&#34;&gt;Knowing vs Understanding&lt;/h1&gt;
-
-&lt;p&gt;I believe there is an important distinction between knowing and understanding. Knowing is a matter of committing information to memory. Knowing requires some regular maintenance, refreshing your memory to make sure you still know what you thought you knew. Absorbing and retaining information accounts for most of the work involved in learning whether independently or at school.&lt;/p&gt;
-
-&lt;p&gt;Understanding is more elusive and hard to pin down, but you know it when you feel it. It&amp;rsquo;s what we&amp;rsquo;re talking about when we say that something suddenly &lt;em&gt;clicked&lt;/em&gt; for us. It&amp;rsquo;s a natural intuition about not only how but &lt;em&gt;why&lt;/em&gt; something works. Understanding is the ultimate goal of learning and is difficult to achieve not because it necessarily takes more effort, or requires you to be &amp;ldquo;smarter&amp;rdquo; but because it works in mysterious ways. There are many different kinds of thinkers in the world, and it&amp;rsquo;s perhaps impossible to know exactly what will trigger that &lt;em&gt;click&lt;/em&gt; in a particular person&amp;rsquo;s mind.&lt;/p&gt;
-
-&lt;p&gt;To be clear, I&amp;rsquo;m not suggesting that spending time memorizing information is a bad thing. It is a valuable and worthwhile part of the process of learning but the end goal should always be to understand. It&amp;rsquo;s also important to recognize that understanding is not the guaranteed by-product of more knowledge. Sometimes you need to step back from what you think you know and approach a subject in a new way that might seem overly simple or even completely wrong.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-trouble-with-quaternions:b762920e564d63abd381744d4823985c&#34;&gt;The Trouble With Quaternions&lt;/h1&gt;
-
-&lt;p&gt;Which brings me to quaternions. I have known about them for a long time. I&amp;rsquo;ve done a lot of work with 3D software, and took a special interest in rigging. I became very familiar with the headache-inducing problem known as gimbal lock. I understand why it happens and I know that quaternions fix it. But I don&amp;rsquo;t have much of a concept of how or why they work.&lt;/p&gt;
-
-&lt;p&gt;Thinking about rotations in terms of degrees around the x, y, and z axes is easy to visualize. When we use the rotation tool in any sort of 3D software it typically shows a gimbal with three rings surrounding an object. You can imagine how those rings would function if they were a physical object, like a gyroscope or that spinning contraption they use for astronaut training (it&amp;rsquo;s apparently called an &lt;a href=&#34;https://en.wikipedia.org/wiki/Aerotrim&#34;&gt;aerotrim&lt;/a&gt;.)&lt;/p&gt;
-
-&lt;p&gt;The difficulty with quaternions in Unity is that there is a layer of abstraction involved when working with them. What I mean by this is that a quaternion stores information in the form of a complex number. This information isn&amp;rsquo;t human-readable to anybody without a truly brilliant understanding of abstract math, so we don&amp;rsquo;t manipulate it directly. Instead we have various ways of &amp;ldquo;encoding&amp;rdquo; rotations as quaternions, such as the &lt;code&gt;AngleAxis&lt;/code&gt; &lt;code&gt;Euler&lt;/code&gt; and &lt;code&gt;LookRotation&lt;/code&gt; methods.&lt;/p&gt;
-
-&lt;p&gt;This can lead to situations where you&amp;rsquo;re using &lt;code&gt;Euler&lt;/code&gt; to define rotations in one part of your code, using &lt;code&gt;AngleAxis&lt;/code&gt; to create a quaternion somewhere else and then multiplying that by some objects &lt;code&gt;transform.rotation&lt;/code&gt;, multiplying quaternions by other quaternions, quaternions to vectors, using vectors to make new quaternions with &lt;code&gt;LookRotation&lt;/code&gt;, etc etc. It&amp;rsquo;s confusing because it feels like working with a lot of separate tools instead of one coherent system.&lt;/p&gt;
-
-&lt;h1 id=&#34;visualizing-rotations:b762920e564d63abd381744d4823985c&#34;&gt;Visualizing Rotations&lt;/h1&gt;
-
-&lt;p&gt;While trying to make the car in my game move properly I had a &lt;em&gt;click&lt;/em&gt; moment that helped me to finally understand how to combine all of those different tools without getting lost. I&amp;rsquo;m a visual thinker, and the visualization that worked for me looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/notaquaternion.png&#34; alt=&#34;Not a quaternion!&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Most of the time when I&amp;rsquo;m dealing with rotations in a game it&amp;rsquo;s because I want an object to point in a certain direction. Since the position and movement of an object are represented by vectors it is tempting to also use a vector to tell an object which direction to point. Imagine you&amp;rsquo;re holding the object with an outstretched arm. You may be able to point the object in any direction, but you are also able to change its orientation by rotating your wrist.&lt;/p&gt;
-
-&lt;p&gt;So in order to represent all possible rotations you actually need two vectors: a &lt;em&gt;forward&lt;/em&gt; and an &lt;em&gt;up&lt;/em&gt;. I like to picture them as being connected and looking something like the object pictured above. This is not what a quaternion looks like, they are not just vectors attached to other vectors. However, it is a great way to see how the different methods for working with quaternions are conceptually similar, and finding similarities between things that appear separate and different is a major step toward understanding.&lt;/p&gt;
-
-&lt;p&gt;Imagine pointing that big green arrow in a certain direction, and then spinning it on its long axis to decide where the small arrow should point. That&amp;rsquo;s basically the &lt;code&gt;LookRotation&lt;/code&gt; method&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:b762920e564d63abd381744d4823985c:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:b762920e564d63abd381744d4823985c:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. It takes a forward vector (big arrow) and an up vector (small arrow) as arguments. Now imagine doing the opposite, you point the small arrow in some direction and then, holding the small arrow in place, you spin the big one around like a weather vane. That&amp;rsquo;s &lt;code&gt;AngleAxis&lt;/code&gt;. It takes an up vector, and how many degrees you&amp;rsquo;ve spun around it.&lt;/p&gt;
-
-&lt;p&gt;Once I started thinking about rotations this way I started to see useful connections between rotations and vectors. At any point on the road in my game I have a method that returns the surface normal. Projecting the local forward vector of the car on to the surface defined by that normal gives me the thrust vector of the car relative to the road surface. Using &lt;code&gt;LookRotation&lt;/code&gt; in the direction of thrust with the track normal as the up vector gives me the quaternion for which direction the car should be facing. Multiply that by a second quaternion created with &lt;code&gt;AngleAxis&lt;/code&gt; that represents the steering angle in degrees per frame and the car turns properly.&lt;/p&gt;
-
-&lt;p&gt;The result: F-Zero style arcade physics in which the car sticks to the road and moves relative to its surface normal. Problem solved!&lt;/p&gt;
-
-&lt;h1 id=&#34;the-power-of-simplicity:b762920e564d63abd381744d4823985c&#34;&gt;The Power of Simplicity&lt;/h1&gt;
-
-&lt;p&gt;If this seems overly simple it&amp;rsquo;s because it is, and that&amp;rsquo;s not necessarily a bad thing. A major obstacle to understanding a large and complicated concept is assuming that we don&amp;rsquo;t have enough knowledge yet, or maybe that we&amp;rsquo;re not &amp;ldquo;smart enough&amp;rdquo; to get it. More often than not the opposite is true and we are actually over thinking it. The largest and most complicated ideas are connected to simple and familiar concepts on low levels that aren&amp;rsquo;t immediately obvious.&lt;/p&gt;
-
-&lt;p&gt;Discovering these connections is tremendously rewarding and is the number one thing that motivates me to keep learning and creating things.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:b762920e564d63abd381744d4823985c:1&#34;&gt;This isn&amp;rsquo;t a perfect visualization for LookRotation since the forward and up arguments wont always be perpendicular
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:b762920e564d63abd381744d4823985c:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>https://example.com/post/racerupdate3/</guid>
+      <description>The game finally has a driveable vehicle! The biggest challenge in this latest update was solving the tricky problem of getting the car to stick to the track and have correct rotations relative to the road surface while moving and steering. Another small but important addition is the guardrails which help to improve the sense of speed as they fly by.
+I&#39;ll be releasing a playable OpenGL build soon, there are a couple more features I want to add, including some options on the main menu to let you adjust parameters of the track generator.</description>
     </item>
     
     <item>
       <title>Racing Game Update - Recursive Functions and Stylish Hovercars</title>
-      <link>http://www.jakecaspick.com/post/racerupdate2/</link>
+      <link>https://example.com/post/racerupdate2/</link>
       <pubDate>Tue, 01 Mar 2016 10:51:56 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/racerupdate2/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &amp;ldquo;flat pass&amp;rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &amp;ldquo;height pass&amp;rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.&lt;/p&gt;
-
-&lt;p&gt;It was overly complicated and didn&amp;rsquo;t work.&lt;/p&gt;
-
-&lt;p&gt;So I tried a different solution which is almost the exact opposite: generate the track piece-by-piece evaluating each step and proceeding only if the path is clear. To accomplish this I used recursively nested coroutines, allowing a certain number of &amp;ldquo;tries&amp;rdquo; at each step before backtracking to a previous one. I enjoy solving problems with recursion and had a lot of fun writing this algorithm. Here&amp;rsquo;s a video of the new track generator in action, I find it quite satisfying to watch.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;https://player.vimeo.com/video/156899587&#34; width=&#34;720&#34; height=&#34;400&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;I also created a texture for the hovercar from the last update!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/uAEwsdi.gif&#34; alt=&#34;stylish hovercar&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/racerupdate2/</guid>
+      <description>I&#39;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &amp;ldquo;flat pass&amp;rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &amp;ldquo;height pass&amp;rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</description>
     </item>
     
     <item>
       <title>Racing Game Update - Progress on the Track Generator</title>
-      <link>http://www.jakecaspick.com/post/racerupdate1/</link>
+      <link>https://example.com/post/racerupdate1/</link>
       <pubDate>Wed, 24 Feb 2016 20:19:48 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/racerupdate1/</guid>
-      <description>&lt;p&gt;The track generator in the first prototype of my &lt;a href=&#34;http://www.jakecaspick.com/ProceduralRacer/&#34;&gt;procedural racing game&lt;/a&gt; works like a treadmill. The road is generated ahead of you and disappears behind you as you drive. Constantly creating and destroying objects in a game is bad practice, so I use what is known as an object pool. Rather than constantly spawning new track segments, the ones that disappear behind you are &amp;ldquo;recycled&amp;rdquo; back to the front.&lt;/p&gt;
-
-&lt;p&gt;The problem with this is that the object I was using as a track segment contained the mesh, the parameters that define the shape of the arc, and the methods for reasoning about the arc. This is a problem for two reasons. The first is that building huge classes with too much functionality is a bad coding habit in general. The second and more specific reason is that when a section of track is &amp;ldquo;recycled&amp;rdquo; we permanently lose all data about its previous life. It is impossible to travel backwards or to view the entirety of the track.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve written a new and improved track generator that keeps data and meshes separate. I&amp;rsquo;ve also made it more customizable and able to produce different styles of tracks. Here are two examples:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/racer2.png&#34; alt=&#34;New Track Generation&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;These settings produce constantly winding roads similar to the first prototype.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/racer3.png&#34; alt=&#34;New Track Generation&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;These settings make long straight sections punctuated by sharp turns.&lt;/p&gt;
-
-&lt;p&gt;The next problem to solve is preventing the track from intersecting itself when it makes loops. In the first prototype I cheated and made the track constantly slope downwards so it would never cross itself. My work-in-progress solution involves dividing the world into a 2D grid, counting the amount of times the track passes through each section of the grid, and where several tracks pass through the same section, separating them by a minimum height. The green tiles in the above images are a visualization of that grid.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/turntable1.gif&#34; alt=&#34;80s style hovercar&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve also been modelling a proper vehicle for the game to replace the lovely capsule primitive that currently fills that role. Think hovercar that looks like a 1980s sports car.&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/racerupdate1/</guid>
+      <description>The track generator in the first prototype of my procedural racing game works like a treadmill. The road is generated ahead of you and disappears behind you as you drive. Constantly creating and destroying objects in a game is bad practice, so I use what is known as an object pool. Rather than constantly spawning new track segments, the ones that disappear behind you are &amp;ldquo;recycled&amp;rdquo; back to the front.</description>
     </item>
     
     <item>
       <title>Endless Rainbow Road - A Procedural Racetrack Generator</title>
-      <link>http://www.jakecaspick.com/post/endlessroad/</link>
+      <link>https://example.com/post/endlessroad/</link>
       <pubDate>Fri, 19 Feb 2016 10:44:30 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/endlessroad/</guid>
-      <description>
-
-&lt;h1 id=&#34;play-proceduralracer-view-source-code-https-github-com-jcaspick-proceduralracer:73894c868b704a69ebaf87d27a1403d5&#34;&gt;- &lt;a href=&#34;http://www.jakecaspick.com/ProceduralRacer/&#34;&gt;Play&lt;/a&gt; - &lt;a href=&#34;https://github.com/jcaspick/ProceduralRacer&#34;&gt;View Source Code&lt;/a&gt; -&lt;/h1&gt;
-
-&lt;p&gt;Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&amp;rsquo;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.&lt;/p&gt;
-
-&lt;p&gt;This week I built a prototype to test this idea.  You can play it &lt;a href=&#34;http://www.jakecaspick.com/ProceduralRacer/&#34;&gt;here&lt;/a&gt; and view the source code &lt;a href=&#34;https://github.com/jcaspick/ProceduralRacer&#34;&gt;on github&lt;/a&gt;.  Read on for a post mortem of the project.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/racer1.png&#34; alt=&#34;Infinite Rainbow Road!&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;the-idea:73894c868b704a69ebaf87d27a1403d5&#34;&gt;The Idea&lt;/h1&gt;
-
-&lt;p&gt;A racetrack is conceptually a very simple object. It is essentially a ribbon, a flat surface extruded along a path. My first thought was to use splines or bezier curves (which are just a specific type of spline). I could randomly generate a series of points and interpolate curves between them to get the center line of the racetrack. Then I could offset curves on either side and draw geometry between the curves.&lt;/p&gt;
-
-&lt;h1 id=&#34;problem-1:73894c868b704a69ebaf87d27a1403d5&#34;&gt;Problem #1&lt;/h1&gt;
-
-&lt;p&gt;The big problem with splines, and it is an especially big problem in the context of a racing game, is that there is no simple way to determine their length. The simplest workaround is to approximate the curve with a series of straight line segments, but even that seemed like a lot of work for a less than ideal result.&lt;/p&gt;
-
-&lt;p&gt;On top of that, it turns out it is non-trivial to offset a curve from a spline such that the space in between the two curves has a constant width. It can be done, however the catch is that the offset curve of a spline cannot itself be represented as a spline. In other words, there would be no simple way to take a point on the center spline and find the corresponding point on the offset curve, which I would need to do to place vertices. (&lt;a href=&#34;http://stackoverflow.com/questions/4148831/how-to-offset-a-cubic-bezier-curve&#34;&gt;more information in this Stack Overflow discussion.&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;I scrapped the idea of using splines pretty quickly.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-solution:73894c868b704a69ebaf87d27a1403d5&#34;&gt;The Solution&lt;/h1&gt;
-
-&lt;p&gt;My research led me to two articles which were absolute goldmines of information. &lt;a href=&#34;http://www.redblobgames.com/articles/curved-paths/&#34;&gt;The first article&lt;/a&gt;
- deals with the problem of drawing curved roads in a Sim City type game, &lt;a href=&#34;http://www.learn-cocos2d.com/2012/07/starting-point-train-game-freeform-tracks/&#34;&gt;the second&lt;/a&gt; deals with drawing curved tracks for a train simulator. Both were very similar to what I was trying to do, and both began by addressing the problems of using bezier curves.&lt;/p&gt;
-
-&lt;p&gt;Both articles make the case for circular arcs as an alternative to splines, and that is what I ended up using for my game. With circular arcs it is trivial to calculate distance and to make perfect offsets. They are also more visually pleasing (and actually closely resemble the curvature of real-world roads and train tracks which are modelled with &lt;a href=&#34;https://en.wikipedia.org/wiki/Euler_spiral&#34;&gt;Euler Spirals&lt;/a&gt;.)&lt;/p&gt;
-
-&lt;h1 id=&#34;problem-2:73894c868b704a69ebaf87d27a1403d5&#34;&gt;Problem #2&lt;/h1&gt;
-
-&lt;p&gt;Building a single arc segment object was quite simple. The object takes a starting point, starting angle, radius, and end angle and generates a mesh (&lt;a href=&#34;http://catlikecoding.com/unity/tutorials/procedural-grid/&#34;&gt;this tutorial&lt;/a&gt; was very helpful for the mesh building part.)&lt;/p&gt;
-
-&lt;p&gt;When I tried to string several arc segments together into a track, I encountered a frustrating problem that has to do with converting between a right-handed and left-handed coordinate system. I was using simple trigonometry to calculate points on my arcs. An angle of zero degrees points toward the positive X axis, and angles increase in a counterclockwise direction. However, in Unity an angle of zero degrees on the XZ plane points toward positive Z, and angles increase going clockwise.  As a result, none of my arcs were lining up properly.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-solution-1:73894c868b704a69ebaf87d27a1403d5&#34;&gt;The Solution&lt;/h1&gt;
-
-&lt;p&gt;At first I tried to compensate for the difference in coordinate systems by writing conversion functions between them, but by this time my code was a tangled mess. I was passing data around, manipulating it with trigonometry and then converting it into Unity rotations by using the AngleAxis and Euler functions of Quaternions. It was difficult to pinpoint exactly where the conversion problem originated from, and any time I thought I had solved it I was breaking something else that I wouldn&amp;rsquo;t notice until later.&lt;/p&gt;
-
-&lt;p&gt;I decided to rewrite the code from scratch. This time, to keep things simple and consistent, I didn&amp;rsquo;t apply any rotations to the arc objects whatsoever. To connect two arcs together seamlessly, I offset the starting angle of the second arc to match the ending angle of the first.&lt;/p&gt;
-
-&lt;h1 id=&#34;what-i-learned:73894c868b704a69ebaf87d27a1403d5&#34;&gt;What I Learned&lt;/h1&gt;
-
-&lt;p&gt;On the practical side, I learned two important new Unity skills. The first being the ability to generate geometry and UV coordinates from code, which is an extremely powerful tool. Secondly, a more subtle but equally powerful tool is writing extension methods to add functionality to built-in Unity classes (specifically, I needed a simple way to get just the X and Z components of a &lt;code&gt;Vector3&lt;/code&gt; for certain calculations.)&lt;/p&gt;
-
-&lt;p&gt;I also learned, after much frustrated troubleshooting, that sometimes the best solution to a problem is to start over. It&amp;rsquo;s not fun to start over, but it&amp;rsquo;s even less fun to write code bandaids to try and fix a low-level problem that could&amp;rsquo;ve been easily solved had I noticed it at the beginning. Plus, when you write a section of code for the second time you have a better understanding of how it should work, and can salvage pieces of the old code to speed up the process.&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/endlessroad/</guid>
+      <description>- Play - View Source Code - Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&#39;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.
+This week I built a prototype to test this idea. You can play it here and view the source code on github.</description>
     </item>
     
     <item>
       <title>ZTower - My First HTML5 Game</title>
-      <link>http://www.jakecaspick.com/post/ztower/</link>
+      <link>https://example.com/post/ztower/</link>
       <pubDate>Thu, 11 Feb 2016 12:08:56 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/ztower/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/ztower.png&#34; alt=&#34;ZTower&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a simple game I wrote in the summer of 2015 when I was first learning Javascript. I created it using the Phaser game library. You can &lt;a href=&#34;https://jcaspick.github.io/ytower/&#34;&gt;play the game here&lt;/a&gt; and you can find the &lt;a href=&#34;https://github.com/jcaspick/ytower&#34;&gt;source code on GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/ztower/</guid>
+      <description>This is a simple game I wrote in the summer of 2015 when I was first learning Javascript. I created it using the Phaser game library. You can play the game here and you can find the source code on GitHub.</description>
     </item>
     
     <item>
       <title>Creating Infinite Tunnels With Raymarching</title>
-      <link>http://www.jakecaspick.com/post/raymarching/</link>
+      <link>https://example.com/post/raymarching/</link>
       <pubDate>Thu, 11 Feb 2016 11:46:35 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/raymarching/</guid>
-      <description>&lt;p&gt;I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found &lt;a href=&#34;http://9bitscience.blogspot.ca/2013/07/raymarching-distance-fields_14.html&#34;&gt;here&lt;/a&gt; and many working examples can be found on &lt;a href=&#34;https://www.shadertoy.com/view/Xds3zN&#34;&gt;Shadertoy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I wanted to explore this technique in more depth. The best way to understand how something works is to take it apart and put it back together, so I decided to write my own raymarcher in Processing by porting code from the above links. This project has given me a more detailed understanding of 3D rendering and a &lt;em&gt;lot&lt;/em&gt; of practice with vector math in 3D space. Even in it&amp;rsquo;s current bare-bones state, it is capable of generating some very cool images.  The most fun use of the program that I&amp;rsquo;ve discovered is creating these infinite tunnel gifs.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/raymarch1.gif&#34; alt=&#34;raymarch1&#34; /&gt;
-&lt;img src=&#34;http://www.jakecaspick.com/img/raymarch2.gif&#34; alt=&#34;raymarch2&#34; /&gt;
-&lt;img src=&#34;http://www.jakecaspick.com/img/protoplasm.gif&#34; alt=&#34;protoplasm&#34; /&gt;
-&lt;img src=&#34;http://www.jakecaspick.com/img/clockwerk.gif&#34; alt=&#34;clockwerk&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can view the source code &lt;a href=&#34;https://github.com/jcaspick/processing-raymarcher&#34;&gt;on GitHub&lt;/a&gt;.  I&amp;rsquo;ve tried to organize the code in a readable way, and written lots of comments explaining how the different parts work.&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/raymarching/</guid>
+      <description>I recently learned about an interesting technique for rendering 3D images, known as raymarching distance fields. This technique became popular in the demoscene for its power and simplicity. It is capable of generating complexly detailed 3D images in real time with remarkably few lines of code. An excellent explanation of how the algorithm works can be found here and many working examples can be found on Shadertoy.
+I wanted to explore this technique in more depth.</description>
     </item>
     
     <item>
       <title>Global Game Jam 2016 - Writing a Procedural Maze Generator</title>
-      <link>http://www.jakecaspick.com/post/gamejam2016/</link>
+      <link>https://example.com/post/gamejam2016/</link>
       <pubDate>Wed, 10 Feb 2016 11:38:08 -0400</pubDate>
       
-      <guid>http://www.jakecaspick.com/post/gamejam2016/</guid>
-      <description>
-
-&lt;p&gt;This year I participated in the Global Game Jam at Volta Labs.&lt;/p&gt;
-
-&lt;p&gt;The theme of the game jam was &lt;strong&gt;ritual&lt;/strong&gt;.  In our group brainstorm we thought of rituals as referring to repetitive behaviors and routines, which got us thinking about robots designed to perform specific functions, which ultimately led to an elaborate and whimsical game idea about amnesiac robots trying to rediscover their purpose.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/dd1.png&#34; alt=&#34;Directile Dysfunction: A Search For Meaning&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Procedurally generated levels were part of the design of the game, and my role in the team was to write the level generator.  It later became apparent that our idea was over-ambitious (it wouldn&amp;rsquo;t be a game jam without a crash course in scope creep!)  My new mission was to take the code I had written so far and make a game out of it, trying to fit in as many elements of the original idea as possible.  The end result, just barely finished before the deadline, was a simple find-the-exit maze game starring a robot with an existential crisis.  You can download the game and Unity project &lt;a href=&#34;http://globalgamejam.org/2016/games/directile-dysfunction&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What follows is a post-mortem of the things that worked, the things that didn&amp;rsquo;t work, and the lessons I learned from my game jam experience.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-challenge:d7fd8029c5ea5af11a17d471ecd44ec6&#34;&gt;The Challenge&lt;/h1&gt;
-
-&lt;p&gt;Being mindful of the always-looming deadline, I chose a simple concept for the procedural level generator.  The game world would be a network of individual rooms connected by doors, and only one room would be shown on the screen at any given time, like the dungeons in the first Zelda games.&lt;/p&gt;
-
-&lt;p&gt;The algorithm I wrote stored the game world in a two dimensional array.  Each element of that array was an instance of a &lt;code&gt;Room&lt;/code&gt; class which contained, among many other things, information about which other rooms it was connected to.  For every room in the array a compass direction was chosen at random and a connection was made to the neighboring room in that direction.  I thought that since every room had at least one connection, a path would therefore exist between any two rooms.  After that was done I wrote an ASCII display so I could see the worlds my algorithm was generating&amp;hellip;&lt;/p&gt;
-
-&lt;h1 id=&#34;the-problem:d7fd8029c5ea5af11a17d471ecd44ec6&#34;&gt;The Problem&lt;/h1&gt;
-
-&lt;p&gt;Whoops.&lt;/p&gt;
-
-&lt;p&gt;My hypothesis was wrong.  Rather than a single network of rooms, I got multiple isolated islands.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.jakecaspick.com/img/ddlevel1.png&#34; alt=&#34;level generator problem&#34; /&gt;
-&lt;img src=&#34;http://www.jakecaspick.com/img/ddlevel2.png&#34; alt=&#34;level generator problem&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I realized now that what I was trying to write was, in essence, a maze generator.  I started reading about different ways of creating mazes and learned about Kruskal&amp;rsquo;s algorithm, Prim&amp;rsquo;s algorithm, and recursive backtracking. (lots of great information and code examples &lt;a href=&#34;http://weblog.jamisbuck.org/2011/2/7/maze-generation-algorithm-recap.html&#34;&gt;here&lt;/a&gt; if anybody is interested!)  Many browser tabs later I realized that I had fallen into a &lt;a href=&#34;https://xkcd.com/214/&#34;&gt;Nerd Vortex&lt;/a&gt;, that I wasn&amp;rsquo;t &lt;em&gt;really&lt;/em&gt; working on my code anymore, and that it was very late.&lt;/p&gt;
-
-&lt;p&gt;I decided to sleep on it.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-solution:d7fd8029c5ea5af11a17d471ecd44ec6&#34;&gt;The Solution&lt;/h1&gt;
-
-&lt;p&gt;My first plan was simply to create a connection linking each of the islands.  To do that I wrote a depth first search algorithm.  It worked recursively, calling itself on each neighbor of a starting room and finally returning a list of every room it found.  Now that I could identify each island, I could search for connections which would merge two islands together, and repeat that process until only one superisland remained.&lt;/p&gt;
-
-&lt;p&gt;The problem was time.  I had already spent too much time generating and manipulating graphs of rooms, and there was still an entire game to build!  So I decided to use the code I already had for a quick and simple solution: use the largest island as the game world and discard the other islands.&lt;/p&gt;
-
-&lt;p&gt;As a bonus, I also got the solution to another problem almost for free!  By making a small modification to the depth first search algorithm I could keep track of the recursion depth and attach that data to each room searched.  This meant I could pick the two rooms with the least and greatest depth to be the start and end points of the level, so you would never start the game right next to the goal.&lt;/p&gt;
-
-&lt;h1 id=&#34;what-i-learned:d7fd8029c5ea5af11a17d471ecd44ec6&#34;&gt;What I Learned&lt;/h1&gt;
-
-&lt;p&gt;Nobody loves the stress of having deadlines, but time constraints are ultimately good for creativity.  I have a tendency to be a perfectionist, which can bring my productivity to a standstill if I get lost in small details.  Given unlimited time, I probably would&amp;rsquo;ve started from scratch and tried to implement one of the maze algorithms I had learned about.  The deadline forced me to think differently and to keep moving.  Instead of seeing my algorithm as &lt;em&gt;wrong&lt;/em&gt; and rewriting it, I saw opportunities to make creative use of what I already had.&lt;/p&gt;
-
-&lt;p&gt;The lesson I learned is summed up nicely by a poster on the wall at Volta: &amp;ldquo;done is better than perfect.&amp;rdquo;&lt;/p&gt;
-</description>
+      <guid>https://example.com/post/gamejam2016/</guid>
+      <description>This year I participated in the Global Game Jam at Volta Labs.
+The theme of the game jam was ritual. In our group brainstorm we thought of rituals as referring to repetitive behaviors and routines, which got us thinking about robots designed to perform specific functions, which ultimately led to an elaborate and whimsical game idea about amnesiac robots trying to rediscover their purpose.
+Procedurally generated levels were part of the design of the game, and my role in the team was to write the level generator.</description>
     </item>
     
   </channel>

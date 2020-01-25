@@ -1,60 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.jakecaspick.com/</loc>
-    <lastmod>2016-03-12T10:57:31-04:00</lastmod>
-    <priority>0</priority>
+    <loc>https://example.com/</loc>
+    <lastmod>2019-08-07T19:07:19-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/ruedehue1/</loc>
-    <lastmod>2016-03-12T10:57:31-04:00</lastmod>
+    <loc>https://example.com/project/</loc>
+    <lastmod>2019-08-07T19:07:19-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/minijam1/</loc>
+    <loc>https://example.com/project/sugarcube/</loc>
+    <lastmod>2019-08-07T19:07:19-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2016-03-12T10:57:31-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/ruedehue1/</loc>
+    <lastmod>2016-03-12T10:57:31-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/minijam1/</loc>
     <lastmod>2016-03-12T10:56:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/racerupdate3/</loc>
+    <loc>https://example.com/post/racerupdate3/</loc>
     <lastmod>2016-03-03T11:35:32-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/racerupdate2/</loc>
+    <loc>https://example.com/post/racerupdate2/</loc>
     <lastmod>2016-03-01T10:51:56-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/racerupdate1/</loc>
+    <loc>https://example.com/post/racerupdate1/</loc>
     <lastmod>2016-02-24T20:19:48-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/endlessroad/</loc>
+    <loc>https://example.com/post/endlessroad/</loc>
     <lastmod>2016-02-19T10:44:30-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/about/</loc>
-    <lastmod>2016-02-11T14:56:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.jakecaspick.com/post/ztower/</loc>
+    <loc>https://example.com/post/ztower/</loc>
     <lastmod>2016-02-11T12:08:56-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/raymarching/</loc>
+    <loc>https://example.com/post/raymarching/</loc>
     <lastmod>2016-02-11T11:46:35-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.jakecaspick.com/post/gamejam2016/</loc>
+    <loc>https://example.com/post/gamejam2016/</loc>
     <lastmod>2016-02-10T11:38:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>
