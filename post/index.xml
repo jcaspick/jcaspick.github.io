@@ -6,10 +6,20 @@
     <description>Recent content in Blog on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Mar 2016 10:57:31 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 19:25:38 -0400</lastBuildDate>
     
 	<atom:link href="https://www.jakecaspick.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Global Game Jam 2020 Post Mortem</title>
+      <link>https://www.jakecaspick.com/post/ggj2020/</link>
+      <pubDate>Wed, 05 Feb 2020 19:25:38 -0400</pubDate>
+      
+      <guid>https://www.jakecaspick.com/post/ggj2020/</guid>
+      <description>At this years Global Game Jam I was part of a team of five that was roughly divided into two programmers and three artists/game designers (see the bottom of this post for credits and links to their socials.) It was a great experience and I&#39;m proud of the game we built together. What follows is a little post mortem of my experience.
+What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, which may be my favorite theme of any game jam I&#39;ve been to.</description>
+    </item>
     
     <item>
       <title>Ruedehue Pre-Alpha Demo</title>

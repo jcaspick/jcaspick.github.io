@@ -6,10 +6,20 @@
     <description>Recent content on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 19:07:19 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 19:25:38 -0400</lastBuildDate>
     
 	<atom:link href="https://www.jakecaspick.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Global Game Jam 2020 Post Mortem</title>
+      <link>https://www.jakecaspick.com/post/ggj2020/</link>
+      <pubDate>Wed, 05 Feb 2020 19:25:38 -0400</pubDate>
+      
+      <guid>https://www.jakecaspick.com/post/ggj2020/</guid>
+      <description>At this years Global Game Jam I was part of a team of five that was roughly divided into two programmers and three artists/game designers (see the bottom of this post for credits and links to their socials.) It was a great experience and I&#39;m proud of the game we built together. What follows is a little post mortem of my experience.
+What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, which may be my favorite theme of any game jam I&#39;ve been to.</description>
+    </item>
     
     <item>
       <title>Sugarcube</title>
@@ -113,7 +123,7 @@ Procedurally generated levels were part of the design of the game, and my role i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.jakecaspick.com/about/</guid>
-      <description>I&#39;m a programmer, technical artist, and general computer graphics nerd. My driving passion in life is to never stop learning. I&#39;m the sort of person who cycles through many different hobbies/interests/obsessions, but the ones I&#39;ve&amp;rsquo; consistently come back to throughout my life are computer graphics and programming. I&#39;ve been exploring the twin worlds of graphics and code ever since I was a kid using ResEdit and a primitive 3D program called Mechanisto to add my own ships to the classic Mac game Escape Velocity.</description>
+      <description>I&#39;m a programmer, technical artist, and general computer graphics nerd. My driving passion in life is to never stop learning. I&#39;m the sort of person who cycles through many different hobbies/interests/obsessions, but the ones I&#39;ve consistently come back to throughout my life are computer graphics and programming. I&#39;ve been exploring the twin worlds of graphics and code ever since I was a kid using ResEdit and a primitive 3D program called Mechanisto to add my own ships to the classic Mac game Escape Velocity.</description>
     </item>
     
     <item>
