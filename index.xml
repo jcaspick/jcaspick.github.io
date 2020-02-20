@@ -28,7 +28,7 @@ What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, wh
       
       <guid>https://www.jakecaspick.com/project/sugarcube/</guid>
       <description>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&#39;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.
-You can download the source code here.</description>
+You can find the the source code on github, feel free to modify and expand on it if you are so interested.</description>
     </item>
     
     <item>
