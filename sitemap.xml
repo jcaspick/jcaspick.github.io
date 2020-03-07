@@ -3,6 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.jakecaspick.com/</loc>
+    <lastmod>2020-03-06T18:44:20-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jakecaspick.com/project/</loc>
+    <lastmod>2020-03-06T18:44:20-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jakecaspick.com/project/vaporous/</loc>
+    <lastmod>2020-03-06T18:44:20-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.jakecaspick.com/post/</loc>
     <lastmod>2020-02-05T19:25:38-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -12,20 +33,6 @@
   <url>
     <loc>https://www.jakecaspick.com/post/ggj2020/</loc>
     <lastmod>2020-02-05T19:25:38-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jakecaspick.com/</loc>
-    <lastmod>2020-02-05T19:25:38-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jakecaspick.com/project/</loc>
-    <lastmod>2019-08-07T19:07:19-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
