@@ -6,10 +6,20 @@
     <description>Recent content in Projects on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 18:44:20 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 15:29:29 -0300</lastBuildDate>
     
 	<atom:link href="https://www.jakecaspick.com/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mattorium</title>
+      <link>https://www.jakecaspick.com/project/mattorium/</link>
+      <pubDate>Sun, 21 Jun 2020 15:29:29 -0300</pubDate>
+      
+      <guid>https://www.jakecaspick.com/project/mattorium/</guid>
+      <description>Play Online I won&amp;rsquo;t make you scroll past the blog post to get to the content. Follow this link to play Mattorium in your browser!
+The Game Mattorium is a game about managing an assembly line that produces exotic subatomic particles. The mechanics of the game are simple: particles travel through a series of one-directional tubes and you click on switchers to determine which path they take at intersections. Particles come in six colors and can be stuck together in clusters of up to three.</description>
+    </item>
     
     <item>
       <title>Vaporous</title>
@@ -17,7 +27,7 @@
       <pubDate>Fri, 06 Mar 2020 18:44:20 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/project/vaporous/</guid>
-      <description>The Demo Here&#39;s a screen recording of the demo in action. Other than the hovercar which I modeled and textured by hand, everything you see is procedurally generated.
+      <description>The Demo Here&amp;rsquo;s a screen recording of the demo in action. Other than the hovercar which I modeled and textured by hand, everything you see is procedurally generated.
   And here is footage of a few different tracks being generated from an aerial view so you can get a better idea of what the world looks like.
   Backstory I first started learning Unity sometime in 2015. After making a few rudimentary games by following tutorials, the first real project I started was a racing game called Ruedehue with procedurally generated tracks.</description>
     </item>
@@ -28,7 +38,7 @@
       <pubDate>Wed, 07 Aug 2019 19:07:19 -0300</pubDate>
       
       <guid>https://www.jakecaspick.com/project/sugarcube/</guid>
-      <description>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&#39;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.
+      <description>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&amp;rsquo;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.
 You can find the the source code on github, feel free to modify and expand on it if you are so interested.</description>
     </item>
     

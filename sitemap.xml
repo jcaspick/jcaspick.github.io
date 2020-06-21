@@ -4,14 +4,21 @@
   
   <url>
     <loc>https://www.jakecaspick.com/</loc>
-    <lastmod>2020-03-06T18:44:20-04:00</lastmod>
+    <lastmod>2020-06-21T15:29:29-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jakecaspick.com/project/mattorium/</loc>
+    <lastmod>2020-06-21T15:29:29-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.jakecaspick.com/project/</loc>
-    <lastmod>2020-03-06T18:44:20-04:00</lastmod>
+    <lastmod>2020-06-21T15:29:29-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

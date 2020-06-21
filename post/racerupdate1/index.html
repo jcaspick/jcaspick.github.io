@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.72.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -136,14 +136,14 @@
 
     <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><p>The track generator in the first prototype of my <a href="/ProceduralRacer/">procedural racing game</a> works like a treadmill. The road is generated ahead of you and disappears behind you as you drive. Constantly creating and destroying objects in a game is bad practice, so I use what is known as an object pool. Rather than constantly spawning new track segments, the ones that disappear behind you are &ldquo;recycled&rdquo; back to the front.</p>
 <p>The problem with this is that the object I was using as a track segment contained the mesh, the parameters that define the shape of the arc, and the methods for reasoning about the arc. This is a problem for two reasons. The first is that building huge classes with too much functionality is a bad coding habit in general. The second and more specific reason is that when a section of track is &ldquo;recycled&rdquo; we permanently lose all data about its previous life. It is impossible to travel backwards or to view the entirety of the track.</p>
-<p>I've written a new and improved track generator that keeps data and meshes separate. I've also made it more customizable and able to produce different styles of tracks. Here are two examples:</p>
+<p>I&rsquo;ve written a new and improved track generator that keeps data and meshes separate. I&rsquo;ve also made it more customizable and able to produce different styles of tracks. Here are two examples:</p>
 <p><img src="/img/racer2.png" alt="New Track Generation"></p>
 <p>These settings produce constantly winding roads similar to the first prototype.</p>
 <p><img src="/img/racer3.png" alt="New Track Generation"></p>
 <p>These settings make long straight sections punctuated by sharp turns.</p>
 <p>The next problem to solve is preventing the track from intersecting itself when it makes loops. In the first prototype I cheated and made the track constantly slope downwards so it would never cross itself. My work-in-progress solution involves dividing the world into a 2D grid, counting the amount of times the track passes through each section of the grid, and where several tracks pass through the same section, separating them by a minimum height. The green tiles in the above images are a visualization of that grid.</p>
 <p><img src="/img/turntable1.gif" alt="80s style hovercar"></p>
-<p>I've also been modelling a proper vehicle for the game to replace the lovely capsule primitive that currently fills that role. Think hovercar that looks like a 1980s sports car.</p>
+<p>I&rsquo;ve also been modelling a proper vehicle for the game to replace the lovely capsule primitive that currently fills that role. Think hovercar that looks like a 1980s sports car.</p>
 <ul class="pa0">
   
 </ul>

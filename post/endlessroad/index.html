@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.72.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -135,7 +135,7 @@
     </header>
 
     <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><h1 id="--playproceduralracer---view-source-codehttpsgithubcomjcaspickproceduralracer--">- <a href="/ProceduralRacer/">Play</a> - <a href="https://github.com/jcaspick/ProceduralRacer">View Source Code</a> -</h1>
-<p>Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven't seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.</p>
+<p>Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&rsquo;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.</p>
 <p>This week I built a prototype to test this idea.  You can play it <a href="/ProceduralRacer/">here</a> and view the source code <a href="https://github.com/jcaspick/ProceduralRacer">on github</a>.  Read on for a post mortem of the project.</p>
 <p><img src="/img/racer1.png" alt="Infinite Rainbow Road!"></p>
 <h1 id="the-idea">The Idea</h1>
@@ -152,11 +152,11 @@ deals with the problem of drawing curved roads in a Sim City type game, <a href=
 <p>Building a single arc segment object was quite simple. The object takes a starting point, starting angle, radius, and end angle and generates a mesh (<a href="http://catlikecoding.com/unity/tutorials/procedural-grid/">this tutorial</a> was very helpful for the mesh building part.)</p>
 <p>When I tried to string several arc segments together into a track, I encountered a frustrating problem that has to do with converting between a right-handed and left-handed coordinate system. I was using simple trigonometry to calculate points on my arcs. An angle of zero degrees points toward the positive X axis, and angles increase in a counterclockwise direction. However, in Unity an angle of zero degrees on the XZ plane points toward positive Z, and angles increase going clockwise.  As a result, none of my arcs were lining up properly.</p>
 <h1 id="the-solution-1">The Solution</h1>
-<p>At first I tried to compensate for the difference in coordinate systems by writing conversion functions between them, but by this time my code was a tangled mess. I was passing data around, manipulating it with trigonometry and then converting it into Unity rotations by using the AngleAxis and Euler functions of Quaternions. It was difficult to pinpoint exactly where the conversion problem originated from, and any time I thought I had solved it I was breaking something else that I wouldn't notice until later.</p>
-<p>I decided to rewrite the code from scratch. This time, to keep things simple and consistent, I didn't apply any rotations to the arc objects whatsoever. To connect two arcs together seamlessly, I offset the starting angle of the second arc to match the ending angle of the first.</p>
+<p>At first I tried to compensate for the difference in coordinate systems by writing conversion functions between them, but by this time my code was a tangled mess. I was passing data around, manipulating it with trigonometry and then converting it into Unity rotations by using the AngleAxis and Euler functions of Quaternions. It was difficult to pinpoint exactly where the conversion problem originated from, and any time I thought I had solved it I was breaking something else that I wouldn&rsquo;t notice until later.</p>
+<p>I decided to rewrite the code from scratch. This time, to keep things simple and consistent, I didn&rsquo;t apply any rotations to the arc objects whatsoever. To connect two arcs together seamlessly, I offset the starting angle of the second arc to match the ending angle of the first.</p>
 <h1 id="what-i-learned">What I Learned</h1>
 <p>On the practical side, I learned two important new Unity skills. The first being the ability to generate geometry and UV coordinates from code, which is an extremely powerful tool. Secondly, a more subtle but equally powerful tool is writing extension methods to add functionality to built-in Unity classes (specifically, I needed a simple way to get just the X and Z components of a <code>Vector3</code> for certain calculations.)</p>
-<p>I also learned, after much frustrated troubleshooting, that sometimes the best solution to a problem is to start over. It's not fun to start over, but it's even less fun to write code bandaids to try and fix a low-level problem that could've been easily solved had I noticed it at the beginning. Plus, when you write a section of code for the second time you have a better understanding of how it should work, and can salvage pieces of the old code to speed up the process.</p>
+<p>I also learned, after much frustrated troubleshooting, that sometimes the best solution to a problem is to start over. It&rsquo;s not fun to start over, but it&rsquo;s even less fun to write code bandaids to try and fix a low-level problem that could&rsquo;ve been easily solved had I noticed it at the beginning. Plus, when you write a section of code for the second time you have a better understanding of how it should work, and can salvage pieces of the old code to speed up the process.</p>
 <ul class="pa0">
   
 </ul>

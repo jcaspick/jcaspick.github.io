@@ -6,10 +6,20 @@
     <description>Recent content on Jake Caspick</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 18:44:20 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 15:29:29 -0300</lastBuildDate>
     
 	<atom:link href="https://www.jakecaspick.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mattorium</title>
+      <link>https://www.jakecaspick.com/project/mattorium/</link>
+      <pubDate>Sun, 21 Jun 2020 15:29:29 -0300</pubDate>
+      
+      <guid>https://www.jakecaspick.com/project/mattorium/</guid>
+      <description>Play Online I won&amp;rsquo;t make you scroll past the blog post to get to the content. Follow this link to play Mattorium in your browser!
+The Game Mattorium is a game about managing an assembly line that produces exotic subatomic particles. The mechanics of the game are simple: particles travel through a series of one-directional tubes and you click on switchers to determine which path they take at intersections. Particles come in six colors and can be stuck together in clusters of up to three.</description>
+    </item>
     
     <item>
       <title>Vaporous</title>
@@ -17,7 +27,7 @@
       <pubDate>Fri, 06 Mar 2020 18:44:20 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/project/vaporous/</guid>
-      <description>The Demo Here&#39;s a screen recording of the demo in action. Other than the hovercar which I modeled and textured by hand, everything you see is procedurally generated.
+      <description>The Demo Here&amp;rsquo;s a screen recording of the demo in action. Other than the hovercar which I modeled and textured by hand, everything you see is procedurally generated.
   And here is footage of a few different tracks being generated from an aerial view so you can get a better idea of what the world looks like.
   Backstory I first started learning Unity sometime in 2015. After making a few rudimentary games by following tutorials, the first real project I started was a racing game called Ruedehue with procedurally generated tracks.</description>
     </item>
@@ -28,8 +38,8 @@
       <pubDate>Wed, 05 Feb 2020 19:25:38 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/post/ggj2020/</guid>
-      <description>At this years Global Game Jam I was part of a team of five that was roughly divided into two programmers and three artists/game designers (see the bottom of this post for credits and links to their socials.) It was a great experience and I&#39;m proud of the game we built together. What follows is a little post mortem of my experience.
-What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, which may be my favorite theme of any game jam I&#39;ve been to.</description>
+      <description>At this years Global Game Jam I was part of a team of five that was roughly divided into two programmers and three artists/game designers (see the bottom of this post for credits and links to their socials.) It was a great experience and I&amp;rsquo;m proud of the game we built together. What follows is a little post mortem of my experience.
+What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, which may be my favorite theme of any game jam I&amp;rsquo;ve been to.</description>
     </item>
     
     <item>
@@ -38,7 +48,7 @@ What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, wh
       <pubDate>Wed, 07 Aug 2019 19:07:19 -0300</pubDate>
       
       <guid>https://www.jakecaspick.com/project/sugarcube/</guid>
-      <description>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&#39;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.
+      <description>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&amp;rsquo;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.
 You can find the the source code on github, feel free to modify and expand on it if you are so interested.</description>
     </item>
     
@@ -48,7 +58,7 @@ What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, wh
       <pubDate>Sat, 12 Mar 2016 10:57:31 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/post/ruedehue1/</guid>
-      <description>Play Online Download For Windows Download For Mac CONTROLS: Ideally this game should be played with an Xbox controller, using &amp;lsquo;A&amp;rsquo; to accelerate and the right bumper to drift. For those without Xbox controllers you can drive with the arrow keys and drift with the space bar. I can&#39;t say for sure if other types of controllers will work because the input handling at this stage is of the just-works-enough-so-I-can-test-the-game variety.</description>
+      <description>Play Online Download For Windows Download For Mac CONTROLS: Ideally this game should be played with an Xbox controller, using &amp;lsquo;A&amp;rsquo; to accelerate and the right bumper to drift. For those without Xbox controllers you can drive with the arrow keys and drift with the space bar. I can&amp;rsquo;t say for sure if other types of controllers will work because the input handling at this stage is of the just-works-enough-so-I-can-test-the-game variety.</description>
     </item>
     
     <item>
@@ -57,7 +67,7 @@ What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, wh
       <pubDate>Sat, 12 Mar 2016 10:56:32 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/post/minijam1/</guid>
-      <description>This friday I attended the first of hopefully many mini game jams at Volta Labs. The theme of the game jam was explosions. The time limit: a mere three hours. Building a working game in such a short amount of time is a lot of fun. For a recovering overthinker like myself it&#39;s also a great exercise in rapid prototyping and not getting hung up on small details. Working so fast inevitably means that you&#39;ll write some silly non-optimized code, but it can also lead to some clever quick solutions to problems you might have otherwise spent too much time one.</description>
+      <description>This friday I attended the first of hopefully many mini game jams at Volta Labs. The theme of the game jam was explosions. The time limit: a mere three hours. Building a working game in such a short amount of time is a lot of fun. For a recovering overthinker like myself it&amp;rsquo;s also a great exercise in rapid prototyping and not getting hung up on small details. Working so fast inevitably means that you&amp;rsquo;ll write some silly non-optimized code, but it can also lead to some clever quick solutions to problems you might have otherwise spent too much time one.</description>
     </item>
     
     <item>
@@ -67,7 +77,7 @@ What we made The theme of the jam this year was &amp;ldquo;Repair&amp;rdquo;, wh
       
       <guid>https://www.jakecaspick.com/post/racerupdate3/</guid>
       <description>The game finally has a driveable vehicle! The biggest challenge in this latest update was solving the tricky problem of getting the car to stick to the track and have correct rotations relative to the road surface while moving and steering. Another small but important addition is the guardrails which help to improve the sense of speed as they fly by.
-I&#39;ll be releasing a playable OpenGL build soon, there are a couple more features I want to add, including some options on the main menu to let you adjust parameters of the track generator.</description>
+I&amp;rsquo;ll be releasing a playable OpenGL build soon, there are a couple more features I want to add, including some options on the main menu to let you adjust parameters of the track generator.</description>
     </item>
     
     <item>
@@ -76,7 +86,7 @@ I&#39;ll be releasing a playable OpenGL build soon, there are a couple more feat
       <pubDate>Tue, 01 Mar 2016 10:51:56 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/post/racerupdate2/</guid>
-      <description>I&#39;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &amp;ldquo;flat pass&amp;rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &amp;ldquo;height pass&amp;rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</description>
+      <description>I&amp;rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &amp;ldquo;flat pass&amp;rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &amp;ldquo;height pass&amp;rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</description>
     </item>
     
     <item>
@@ -94,7 +104,7 @@ I&#39;ll be releasing a playable OpenGL build soon, there are a couple more feat
       <pubDate>Fri, 19 Feb 2016 10:44:30 -0400</pubDate>
       
       <guid>https://www.jakecaspick.com/post/endlessroad/</guid>
-      <description>- Play - View Source Code - Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&#39;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.
+      <description>- Play - View Source Code - Last weekend it occured to me that despite the ever-growing popularity of procedurally generated content, I haven&amp;rsquo;t seen a procedural racing game yet. Procedurally generated content would have some interesting implications in a racing game. It would reward general driving skills and the ability to improvise over rote memorization of the track.
 This week I built a prototype to test this idea. You can play it here and view the source code on github.</description>
     </item>
     
@@ -134,7 +144,7 @@ Procedurally generated levels were part of the design of the game, and my role i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.jakecaspick.com/about/</guid>
-      <description>I&#39;m a programmer, technical artist, and general computer graphics nerd. My driving passion in life is to never stop learning. I&#39;m the sort of person who cycles through many different hobbies/interests/obsessions, but the ones I&#39;ve consistently come back to throughout my life are computer graphics and programming. I&#39;ve been exploring the twin worlds of graphics and code ever since I was a kid using ResEdit and a primitive 3D program called Mechanisto to add my own ships to the classic Mac game Escape Velocity.</description>
+      <description>I&amp;rsquo;m a programmer, technical artist, and general computer graphics nerd. My driving passion in life is to never stop learning. I&amp;rsquo;m the sort of person who cycles through many different hobbies/interests/obsessions, but the ones I&amp;rsquo;ve consistently come back to throughout my life are computer graphics and programming. I&amp;rsquo;ve been exploring the twin worlds of graphics and code ever since I was a kid using ResEdit and a primitive 3D program called Mechanisto to add my own ships to the classic Mac game Escape Velocity.</description>
     </item>
     
     <item>

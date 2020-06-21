@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.72.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -29,13 +29,13 @@
     
 
     <meta property="og:title" content="Racing Game Update - Recursive Functions and Stylish Hovercars" />
-<meta property="og:description" content="I&#39;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value." />
+<meta property="og:description" content="I&rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.jakecaspick.com/post/racerupdate2/" />
 <meta property="article:published_time" content="2016-03-01T10:51:56-04:00" />
 <meta property="article:modified_time" content="2016-03-01T10:51:56-04:00" />
 <meta itemprop="name" content="Racing Game Update - Recursive Functions and Stylish Hovercars">
-<meta itemprop="description" content="I&#39;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.">
+<meta itemprop="description" content="I&rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.">
 <meta itemprop="datePublished" content="2016-03-01T10:51:56-04:00" />
 <meta itemprop="dateModified" content="2016-03-01T10:51:56-04:00" />
 <meta itemprop="wordCount" content="185">
@@ -44,7 +44,7 @@
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Racing Game Update - Recursive Functions and Stylish Hovercars"/>
-<meta name="twitter:description" content="I&#39;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value."/>
+<meta name="twitter:description" content="I&rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value."/>
 
   </head>
 
@@ -134,9 +134,9 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><p>I've finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</p>
-<p>It was overly complicated and didn't work.</p>
-<p>So I tried a different solution which is almost the exact opposite: generate the track piece-by-piece evaluating each step and proceeding only if the path is clear. To accomplish this I used recursively nested coroutines, allowing a certain number of &ldquo;tries&rdquo; at each step before backtracking to a previous one. I enjoy solving problems with recursion and had a lot of fun writing this algorithm. Here's a video of the new track generator in action, I find it quite satisfying to watch.</p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><p>I&rsquo;ve finally solved my intersecting track problem. My first solution involved generating the road in multiple passes. First the generator would do a &ldquo;flat pass&rdquo; and lay out road segments on the same plane, freely overlapping. Then it would identify points where the track overlapped and cache some information about those points for the &ldquo;height pass&rdquo; which would add hills and valleys to the road while paying special attention to the intersection points and keeping the overlapping sections separated by a minimum clearance value.</p>
+<p>It was overly complicated and didn&rsquo;t work.</p>
+<p>So I tried a different solution which is almost the exact opposite: generate the track piece-by-piece evaluating each step and proceeding only if the path is clear. To accomplish this I used recursively nested coroutines, allowing a certain number of &ldquo;tries&rdquo; at each step before backtracking to a previous one. I enjoy solving problems with recursion and had a lot of fun writing this algorithm. Here&rsquo;s a video of the new track generator in action, I find it quite satisfying to watch.</p>
 <!-- raw HTML omitted -->
 <p>I also created a texture for the hovercar from the last update!</p>
 <p><img src="http://i.imgur.com/uAEwsdi.gif" alt="stylish hovercar"></p>

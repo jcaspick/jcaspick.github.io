@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.72.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -134,7 +134,7 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><p>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can't say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.</p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l"><p>Sugarcube is a generative art program that creates intricate voxel structures using 3D cellular automata. The program is written in C++ and uses GLFW for creating the window and OpenGL context. The GUI is built using ImGui, an excellent open source project that I can&rsquo;t say enough nice things about. This is the first non-trivial program I wrote while learning OpenGL.</p>
 
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
@@ -146,9 +146,9 @@
   </figure>
 </div>
 
-<p>You can find the the source code <a href="https://github.com/jcaspick/sugarcube/">on github</a>, feel free to modify and expand on it if you are so interested. You can also download a <a href="https://github.com/jcaspick/sugarcube/releases/tag/v0.1">pre-built binary here</a> (windows executable) if you'd like to try making some images without compiling the program from source. It is very much a toy program and the interface is a little rough but I've tried to include lots of helpful tooltips.</p>
+<p>You can find the the source code <a href="https://github.com/jcaspick/sugarcube/">on github</a>, feel free to modify and expand on it if you are so interested. You can also download a <a href="https://github.com/jcaspick/sugarcube/releases/tag/v0.1">pre-built binary here</a> (windows executable) if you&rsquo;d like to try making some images without compiling the program from source. It is very much a toy program and the interface is a little rough but I&rsquo;ve tried to include lots of helpful tooltips.</p>
 <p>The program has two simple shaders, one of which colors the structure using a distance based ramp/gradient, and another which colors the faces based on their direction. These images can be brought into photoshop or some other graphics program and combined to create a variety of different effects.</p>
-<p>Here are some examples of images I've created using this method:</p>
+<p>Here are some examples of images I&rsquo;ve created using this method:</p>
 <p>
 
 
@@ -263,30 +263,30 @@
 </div>
 </p>
 <h1 id="how-it-works">How it works</h1>
-<p>Anybody who shares my interest in generative art has likely heard of cellular automata before. They come up a lot in creative coding circles, probably because they are fun to tinker with and give complex and aesthetically pleasing results while being relatively simple to implement even for beginner programmers. The most famous cellular automata is &ldquo;Conway's Game of Life,&rdquo; in which whole ecosystems of growth and activity seem to emerge from inert clumps of pixels.</p>
+<p>Anybody who shares my interest in generative art has likely heard of cellular automata before. They come up a lot in creative coding circles, probably because they are fun to tinker with and give complex and aesthetically pleasing results while being relatively simple to implement even for beginner programmers. The most famous cellular automata is &ldquo;Conway&rsquo;s Game of Life,&rdquo; in which whole ecosystems of growth and activity seem to emerge from inert clumps of pixels.</p>
 <p>My simplified and not-at-all-mathematically-rigorous explanation of cellular automata is as follows:</p>
 <ul>
 <li>They are patterns of cells in a regular grid structure (most often a 2D square grid, but in my case a 3D volume of voxels)</li>
 <li>The patterns evolve over time in discrete steps</li>
 <li>The next step of the system is computed by applying simple rules to each cell of the current step.</li>
 </ul>
-<p>The state of the pattern at each step is described by whether each cell is &ldquo;alive&rdquo; (filled in) or &ldquo;dead&rdquo; (empty). The rules for Conway's Game of Life for example are as follows:</p>
+<p>The state of the pattern at each step is described by whether each cell is &ldquo;alive&rdquo; (filled in) or &ldquo;dead&rdquo; (empty). The rules for Conway&rsquo;s Game of Life for example are as follows:</p>
 <ul>
 <li>A live cell with fewer than two live neighbors dies</li>
 <li>A live cell with two or three live neighbors is unchanged</li>
 <li>A live cell with more than three live neighbors dies</li>
 <li>A dead cell with exactly three live neighbors becomes a live cell</li>
 </ul>
-<p>If you try using Sugarcube you'll notice that the rules of the system can be set by changing four cryptic variables: eL, eU, fL, and fU. These four numbers are a simple notation for describing Conway's game of life and all conceptually similar cellular automata (known as &ldquo;life-likes&rdquo;). They represent the <strong>lower</strong> and <strong>upper</strong> bounds of two ranges (hence <strong>L</strong> and <strong>U</strong>). Restated in terms of these values, the rules of a life-like cellular automata are as follows:</p>
+<p>If you try using Sugarcube you&rsquo;ll notice that the rules of the system can be set by changing four cryptic variables: eL, eU, fL, and fU. These four numbers are a simple notation for describing Conway&rsquo;s game of life and all conceptually similar cellular automata (known as &ldquo;life-likes&rdquo;). They represent the <strong>lower</strong> and <strong>upper</strong> bounds of two ranges (hence <strong>L</strong> and <strong>U</strong>). Restated in terms of these values, the rules of a life-like cellular automata are as follows:</p>
 <ul>
 <li>a live cell must have at least <strong>eL</strong> neighbors and at most <strong>eU</strong> neighbors to continue living</li>
 <li>a dead cell must have at least <strong>fL</strong> neighbors and at most <strong>fU</strong> neighbors to become a live cell</li>
 </ul>
-<p>Note that not all patterns will result in any sort of growth and it's quite easy to come up with impossible rules that cause the starting shape to die after a single generation.</p>
+<p>Note that not all patterns will result in any sort of growth and it&rsquo;s quite easy to come up with impossible rules that cause the starting shape to die after a single generation.</p>
 <h1 id="further-reading">Further reading</h1>
 <ul>
 <li><a href="https://www.semanticscholar.org/paper/Candidates-for-the-Game-of-Life-in-Three-Dimensions-Bays/c865e0d19f53ba646e076d6e542e1002c92fd3ad">Candidates for the Game of Life in Three Dimensions</a> - An interesting scientific paper that inspired me to write my own 3D cellular automata program in the first place.</li>
-<li><a href="https://copy.sh/life/">Conway's Game of Life viewer</a> - My favorite of the many many Game of Life applets I've come across. It has a nice minimalist presentation and an extensive library of pre-built structures and different rules to experiment with.</li>
+<li><a href="https://copy.sh/life/">Conway&rsquo;s Game of Life viewer</a> - My favorite of the many many Game of Life applets I&rsquo;ve come across. It has a nice minimalist presentation and an extensive library of pre-built structures and different rules to experiment with.</li>
 </ul>
 <ul class="pa0">
   
